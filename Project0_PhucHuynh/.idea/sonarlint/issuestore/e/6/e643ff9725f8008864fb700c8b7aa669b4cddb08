@@ -1,0 +1,27 @@
+
+Y
+java:S18540"<Remove this useless assignment to local variable "userName".(×Î›‰8á£­ğ/
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÃÜ8µ¸½½/
+J
+java:S14810"-Remove this unused "userName" local variable.(×Î›‰8á£­ğ/
+[
+java:S3516"9Refactor this method to not always return the same value.(È³­öúÿÿÿÿ8»öîï/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Ñ¦Ô­8Œİ‹¾/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¥Ûİ úÿÿÿÿ8Ï„œ¾/
+O
+java:S14812"-Remove this unused "password" local variable.(‹Ì¿úÿÿÿÿ8è¶ğ/
+£
+java:S1186;"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÔÑúøúÿÿÿÿ8İÄÔ/
+]	java:S125("<This block of commented-out lines of code should be removed.(¬ú¼¤üÿÿÿÿ8ô«ŸŒ/
+P
+java:S11726".Remove this unused method parameter "scanner".(÷±ìıÿÿÿÿ8ğéëï/
+Z	java:S106/"9Replace this use of System.out or System.err by a logger.(•ÿ¢Íşÿÿÿÿ8Âğ§ğ/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¢åæÑ8ıŞŠ¾/
+£
+java:S11866"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷±ìıÿÿÿÿ8ğéëï/
+T	java:S106"9Replace this use of System.out or System.err by a logger.(§Át8Ï„œ¾/
+^
+java:S18542"<Remove this useless assignment to local variable "password".(‹Ì¿úÿÿÿÿ8è¶ğ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(’î’†úÿÿÿÿ8×„¾/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Åõú¥8Ï„œ¾/
+U	java:S1061"9Replace this use of System.out or System.err by a logger.(’‡¨…8¨Ê²ğ/
