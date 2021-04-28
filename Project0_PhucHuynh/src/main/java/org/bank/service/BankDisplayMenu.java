@@ -82,7 +82,7 @@ public class BankDisplayMenu {
                         String applicationStatus = "Pending";
                         // ask for first name
                         logger.info("Enter your name: ");
-                        String customerName = scanner.nextLine();
+                        String customerName = scanner.next();
                         //ask for phone numer
                         logger.info("Enter your contact in the format ###-###-####");
                         String contact = scanner.next();
@@ -95,7 +95,7 @@ public class BankDisplayMenu {
                         if(contact.matches("[0-9]{3}-[0-9]{3}-[0-9]{4}")) {
                             newCustomer = new Customer(userName, password, customerName, contact, applicationStatus);
                             employeeFunction.registerForNewAccount(newCustomer);
-                            logger.info("Congrats! Thanks for chosing ABC bank. Your account is pending to be approved.");
+                            logger.info("Congrats! Thanks for chosing Billy bank. Your account is pending to be approved.");
 
                         }else {
                             logger.info("Invalid input. Please try again");
@@ -115,7 +115,7 @@ public class BankDisplayMenu {
             }
         } catch (BankException e) {
             logger.error(e);
-
+            displayMenu();
         }
 
     }
@@ -136,66 +136,70 @@ public class BankDisplayMenu {
         String customerOption = scanner.next();
         switch (customerOption) {
             case "1":
+                try {
+                    boolean status = true;
+                    String checkingType = "Checking";
+                    String savingType = "Saving";
+                    while (status) {
+                        logger.info("Select an option: ");
+                        logger.info("1) Create a checking account.");
+                        logger.info("2) Create a saving amount");
+                        logger.info("3) Create a checking and a saving account");
+                        int opt = scanner.nextInt();
+                        if (opt == 1) {
+                            logger.info("Enter the amount:");
+                            double amount = scanner.nextDouble();
+                            if (amount < 0) {
+                                logger.info("Amount entered is invalid. Please enter a positive value.");
+                            } else {
+                                customerService.applyForBankAccount(loginUsername, checkingType, amount);
+                                logger.info("You successfully opened " + checkingType + " with the amount $" + amount);
+                                status = false;
+                            }
 
-                boolean status = true;
-                String checkingType = "Checking";
-                String savingType = "Saving";
-                while (status) {
-                    logger.info("Select an option: ");
-                    logger.info("1) Create a checking account.");
-                    logger.info("2) Create a saving amount");
-                    logger.info("3) Create a checking and a saving account");
-                    int opt = scanner.nextInt();
-                    if (opt == 1) {
-                        logger.info("Enter the amount:");
-                        double amount = scanner.nextDouble();
-                        if (amount < 0) {
-                            logger.info("Amount entered is invalid. Please enter a positive value.");
-                        } else {
-                            customerService.applyForBankAccount(loginUsername, checkingType, amount);
-                            logger.info("You successfully opened " + checkingType + " with the amount $" + amount);
+                        } else if (opt == 2) {
+                            logger.info("Enter the amount:");
+                            double amountsav = scanner.nextDouble();
+                            if (amountsav < 0) {
+                                logger.info("Amount entered is invalid. Please enter a positive value.");
+                                amountsav = scanner.nextDouble();
+                            } else {
+                                customerService.applyForBankAccount(loginUsername, savingType, amountsav);
+                                logger.info("You successfully opened " + savingType + " with the amount $" + amountsav);
+                                status = false;
+                            }
+                        } else if (opt == 3) {
+                            logger.info("Enter the checking account amount");
+                            double checkingAmount = scanner.nextDouble();
+                            if (checkingAmount < 0) {
+                                logger.info("Amount entered is invalid. Please enter a different value.");
+
+                            } else {
+                                customerService.applyForBankAccount(loginUsername, checkingType, checkingAmount);
+                                logger.info("You successfully opened " + checkingType + " with the amount $+" + checkingAmount);
+
+                            }
+
+                            logger.info("Enter the saving account amount");
+                            double savingAmount = scanner.nextDouble();
+                            if (savingAmount < 0) {
+                                logger.info("Amount entered is invalid. Please enter positive value.");
+                                savingAmount = scanner.nextDouble();
+                            } else {
+                                customerService.applyForBankAccount(loginUsername, savingType, savingAmount);
+                                logger.info("You successfully opened " + savingType + " with the amount $" + savingAmount);
+                            }
                             status = false;
-                        }
-
-                    } else if (opt == 2) {
-                        logger.info("Enter the amount:");
-                        double amountsav = scanner.nextDouble();
-                        if (amountsav < 0) {
-                            logger.info("Amount entered is invalid. Please enter a positive value.");
-                            amountsav = scanner.nextDouble();
                         } else {
-                            customerService.applyForBankAccount(loginUsername, savingType, amountsav);
-                            logger.info("You successfully opened " + savingType + " with the amount $" + amountsav);
-                            status = false;
-                        }
-                    } else if (opt == 3) {
-                        logger.info("Enter the checking account amount");
-                        double checkingAmount = scanner.nextDouble();
-                        if (checkingAmount < 0) {
-                            logger.info("Amount entered is invalid. Please enter a different value.");
 
-                        } else {
-                            customerService.applyForBankAccount(loginUsername, checkingType, checkingAmount);
-                            logger.info("You successfully opened " + checkingType + " with the amount $+" + checkingAmount);
-
+                            status = true;
                         }
 
-                        logger.info("Enter the saving account amount");
-                        double savingAmount = scanner.nextDouble();
-                        if (savingAmount < 0) {
-                            logger.info("Amount entered is invalid. Please enter positive value.");
-                            savingAmount = scanner.nextDouble();
-                        } else {
-                            customerService.applyForBankAccount(loginUsername, savingType, savingAmount);
-                            logger.info("You successfully opened " + savingType + " with the amount $" + savingAmount);
-                        }
                         status = false;
-                    } else {
-
-                        status = true;
                     }
-
-                    status = false;
+                }catch (BankException e){
+                    logger.info(e);
+                    displayCustomerMenu(loginUsername);
                 }
                 displayCustomerMenu(loginUsername);
                 break;
@@ -209,7 +213,7 @@ public class BankDisplayMenu {
                         logger.info(a.getAccountType() + ": " + a.getBalance());
                     }
                 } catch (BankException e) {
-                    logger.info(e.getMessage());
+                    logger.error(e.getMessage());
                 }
                 displayCustomerMenu(loginUsername);
                 break;
@@ -244,6 +248,7 @@ public class BankDisplayMenu {
                     }
                 } catch (BankException e) {
                     logger.error(e);
+                    displayCustomerMenu(loginUsername);
                 }
                 displayCustomerMenu(loginUsername);
                 break;
@@ -279,6 +284,7 @@ public class BankDisplayMenu {
                     }
                 } catch (BankException e) {
                     logger.error(e);
+                    displayCustomerMenu(loginUsername);
                 }
                 displayCustomerMenu(loginUsername);
                 break;
@@ -321,20 +327,25 @@ public class BankDisplayMenu {
 
                 } catch (BankException e) {
                     logger.error(e);
+                    displayCustomerMenu(loginUsername);
                 }
                 displayCustomerMenu(loginUsername);
                 break;
             case "6":
-
-                customerService.displayPendingTransaction(loginUsername);
-                logger.info("Enter transaction id that you what to accept:");
-                int option = scanner.nextInt();
-                boolean status1 = false;
-                status1 = customerService.acceptPendingTransfer(option);
-                if (status1 == true) {
-                    logger.info("You successfully accepted the transaction with the id  " + option);
-                } else {
-                    logger.info("Unsuccessfully accepted the transaction");
+                try {
+                    customerService.displayPendingTransaction(loginUsername);
+                    logger.info("Enter transaction id that you what to accept:");
+                    int option = scanner.nextInt();
+                    boolean status1 = false;
+                    status1 = customerService.acceptPendingTransfer(option);
+                    if (status1 == true) {
+                        logger.info("You successfully accepted the transaction with the id  " + option);
+                    } else {
+                        logger.info("Unsuccessfully accepted the transaction");
+                    }
+                }catch (BankException e){
+                    logger.error(e);
+                    displayCustomerMenu(loginUsername);
                 }
                 displayCustomerMenu(loginUsername);
                 break;
@@ -345,6 +356,7 @@ public class BankDisplayMenu {
                     displayMenu();
                 }
         }
+
 
     }
 
@@ -417,6 +429,7 @@ public class BankDisplayMenu {
             }
         } catch (BankException e) {
             logger.error(e);
+            displayEmployeeMenu();
         }
 
     }

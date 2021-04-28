@@ -2,8 +2,8 @@ org/bank/service/EmployeeFunction.java
  org.bank.service.EmployeeFunction
 org/bank/postgressqlconnection/ConnectionManager.java
  org.bank.postgressqlconnection.ConnectionManager
-org/bank/model/BankAccount.java
- org.bank.model.BankAccount
+org/bank/service/BankDisplayMenu.java
+ org.bank.service.BankDisplayMenu
 org/bank/daos/CustomerDAO.java
  org.bank.daos.CustomerDAO
 org/bank/service/CustomerService.java
@@ -18,12 +18,12 @@ org/bank/daos/implementation/CustomerDAOImpl.java
  org.bank.daos.implementation.CustomerDAOImpl
 org/bank/daos/BankAccountDAO.java
  org.bank.daos.BankAccountDAO
+org/bank/model/BankAccount.java
+ org.bank.model.BankAccount
 org/bank/service/BankMain.java
  org.bank.service.BankMain
 org/bank/service/implementation/CustomerServiceImplementation.java
  org.bank.service.implementation.CustomerServiceImplementation
-org/bank/service/BankDisplayMenu.java
- org.bank.service.BankDisplayMenu
 org/bank/service/implementation/EmployeeFunctionImplementation.java
  org.bank.service.implementation.EmployeeFunctionImplementation
 org/bank/daos/implementation/BankAccountDAOImpl.java

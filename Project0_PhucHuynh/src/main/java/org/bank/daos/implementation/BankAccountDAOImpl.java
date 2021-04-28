@@ -91,9 +91,7 @@ public class BankAccountDAOImpl implements BankAccountDAO {
                 bankAccount.setAccountType(resultSet1.getString("account_type"));
                 bankAccount.setBalance(resultSet1.getDouble("balance"));
             }
-            if(!bankAccount.getAccountType().equals(accountType)) throw new BankException("You don't have " + accountType + " account! Please try again");
             double newAmount = bankAccount.getBalance() + amount;
-
             String sql3 = "select b.account_id from mybank_schema.bankaccount b where b.customer_id = ? and b.account_type = ?;\n";
             PreparedStatement preparedStatement3 = connection.prepareStatement(sql3);
             preparedStatement3.setInt(1, customer.getCustomerId());
@@ -361,8 +359,9 @@ public class BankAccountDAOImpl implements BankAccountDAO {
                 transaction.setPendingTransaction(resultSet1.getDouble("pending_transaction"));
                 transaction.setTransactionId(resultSet1.getInt("transaction_id"));
                 if(transaction.getPendingTransaction() < 0  || transaction.getTransactionId() <0) throw new BankException("No transaction foud with the account id " + bankAccount.getAccountId());
-                logger.info("Pending transaction id: " + transaction.getTransactionId() + " Amount: " + transaction.getPendingTransaction());
+                list.add(transaction);
             }
+            if(list.isEmpty()) throw new BankException("There is no pending transaction");
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -446,7 +445,7 @@ public class BankAccountDAOImpl implements BankAccountDAO {
     public List<BankAccount> displayCustomerBankAccountById(int id) throws BankException {
         List<BankAccount> list = new ArrayList<>();
         try (Connection connection = ConnectionManager.getConnection()) {
-            String sql = "SELECT account_type, previous_transaction, balance\n" +
+            String sql = "SELECT account_type, balance\n" +
                     "FROM mybank_schema.bankaccount WHERE customer_id = ?;\n";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
