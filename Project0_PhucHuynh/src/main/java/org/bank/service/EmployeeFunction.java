@@ -8,6 +8,10 @@ import org.bank.model.Customer;
 
 import java.util.List;
 
+/**
+ * Employee function class interface
+ */
+
 public interface EmployeeFunction {
 
 
@@ -21,7 +25,7 @@ public interface EmployeeFunction {
 
     public boolean rejectCustomerAccountById(int id) throws BankException;
 
-    public List<BankAccount> displayPreviousTransactionById(int customerId) throws BankException;
+    public void displayPreviousTransactionById(int customerId) throws BankException;
 
 
 }

@@ -1,109 +1,122 @@
 package org.bank.service;
 
+import org.apache.log4j.Logger;
 import org.bank.exeption.BankException;
 import org.bank.model.BankAccount;
 import org.bank.model.Customer;
-
 import org.bank.service.implementation.CustomerServiceImplementation;
 import org.bank.service.implementation.EmployeeFunctionImplementation;
 
-
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * BankDisplayMenu is created to provide the UI for the users, customers,and employees to interact with and x the console when entering x
+ *
+ * @return a string
+ */
 public class BankDisplayMenu {
 
-
+    private Logger logger = Logger.getLogger(BankDisplayMenu.class);
     private EmployeeFunction employeeFunction = new EmployeeFunctionImplementation();
     private CustomerService customerService = new CustomerServiceImplementation();
 
+
     /*
-     * displayMenu() that provide the UI for the users, customers,and employees to interact with and x the console when entering x
-     * @return a string
+     * This method display the main console which is login
+     *  Note: The registerfortnewaccount() can be refactored and the code could be more organized
+     *
      */
+    public void displayMenu() {
+        try {
 
-    public void displayMenu()  {
-try {
+            logger.info("please select an option:");
+            logger.info("1. Log in as an existing customer");
+            logger.info("2. Log in as an employee");
+            logger.info("3. Sign up for a new customer account");
+            logger.info("x. Exiting the System");
+            Scanner scanner = new Scanner(System.in);
+            String option = scanner.next();
+            //using switch statement to provide the options
+            switch (option) {
+                case "1":
+                    logger.info("Emter your username:");
+                    String loginUsername = scanner.next();
+                    logger.info("Enter your password:");
+                    String loginPassword = scanner.next();
+                    //validate the user name and password to see if they both exists in the same rwo in the database
+                    boolean validation = false;
 
+                    validation = customerService.validateAccount(loginUsername, loginPassword);
 
-    System.out.println("please select an option:");
-    System.out.println("1. Log in as an existing customer");
-    System.out.println("2. Log in as an employee");
-    System.out.println("3. Sign up for a new customer account");
-    System.out.println("x. Exiting the System");
-    Scanner scanner = new Scanner(System.in);
-    String option = scanner.next();
-    //using switch statement to provide the options
-    switch (option) {
-        case "1":
-            System.out.println("Emter your username:");
-            String loginUsername = scanner.next();
-            System.out.println("Enter your password:");
-            String loginPassword = scanner.next();
-            //validate the user name and password to see if they both exists in the same rwo in the database
-            boolean validation = false;
+                    if (validation == true) { // it will will load the displayCustomerMenu if validation is true
+                        displayCustomerMenu(loginUsername);
+                    } else {
+                        //letting the user know that its not valid
+                        logger.info("Invalid username or password. Please try again");
+                    }
+                    displayMenu();
+                    break;
+                case "2":
+                    /*
+                     * assume there is only one employee with username:erica12 & password:phucsonmy
+                     */
 
-            validation = customerService.validateAccount(loginUsername, loginPassword);
+                    logger.info("Emter username:");
+                    String loginUsername1 = scanner.next();
+                    logger.info("Enter password:");
+                    String loginPassword1 = scanner.next();
+                    if (loginUsername1.equalsIgnoreCase("erica12") && loginPassword1.equals("phucsonmy")) {
+                        displayEmployeeMenu();
+                    } else {
+                        logger.info("Your username and password are invalid. Please try again!");
+                        displayMenu();
+                    }
 
-            if (validation == true) { // it will will load the displayCustomerMenu if validation is true
-                displayCustomerMenu(loginUsername);
-            } else {
-                //letting the user know that its not valid
-                System.out.println("Invalid username or password. Please try again");
+                    displayMenu();
+                    break;
+                case "3":
+                    try {
+                        Customer newCustomer;
+                        String applicationStatus = "Pending";
+                        // ask for first name
+                        logger.info("Enter your name: ");
+                        String customerName = scanner.nextLine();
+                        //ask for phone numer
+                        logger.info("Enter your contact in the format ###-###-####");
+                        String contact = scanner.next();
+                        //ask for username
+                        logger.info("Enter username: ");
+                        String userName = scanner.next();
+                        //ask for password
+                        logger.info("Emter password: ");
+                        String password = scanner.next();
+                        if(contact.matches("[0-9]{3}-[0-9]{3}-[0-9]{4}")) {
+                            newCustomer = new Customer(userName, password, customerName, contact, applicationStatus);
+                            employeeFunction.registerForNewAccount(newCustomer);
+                            logger.info("Congrats! Thanks for chosing ABC bank. Your account is pending to be approved.");
+
+                        }else {
+                            logger.info("Invalid input. Please try again");
+                        }
+
+                    } catch (BankException e) {
+                        logger.error(e.getMessage());
+                    }
+                    displayMenu();
+                    break;
+                default:
+                    if(!option.equalsIgnoreCase("x")) {
+                        logger.info("The input is not valid. please re-enter");
+                        displayMenu();
+                    }
+
             }
-            displayMenu();
-            break;
-        case "2":
-            /*
-             * assume there is only one employee with username:erica12 & password:phucsonmy
-             */
+        } catch (BankException e) {
+            logger.error(e);
 
-            System.out.println("Emter username:");
-            String loginUsername1 = scanner.next();
-            System.out.println("Enter password:");
-            String loginPassword1 = scanner.next();
-            if (loginUsername1.equalsIgnoreCase("erica12") && loginPassword1.equals("phucsonmy")) {
-                displayEmployeeMenu();
-            } else {
-                System.out.println("Your username and password are invalid. Please try again!");
-                displayMenu();
-            }
-
-            displayMenu();
-            break;
-        case "3":
-            try {
-                Customer newCustomer;
-                String applicationStatus = "Pending";
-                // ask for first name
-                System.out.println("Enter your your full name: ");
-                String customerName = scanner.next();
-                System.out.println("Enter your contact");
-                long contact = scanner.nextLong();
-                System.out.println("Enter your username: ");
-                String userName = scanner.next();
-                System.out.println("Emter your password: ");
-                String password = scanner.next();
-                newCustomer = new Customer(userName, password, customerName, contact, applicationStatus);
-                employeeFunction.registerForNewAccount(newCustomer);
-                System.out.println("Congrats! Thanks for chosing ABC bank. Your account is pending to be approved.");
-            } catch (BankException e) {
-                System.out.println(e.getMessage());
-            }
-            displayMenu();
-            break;
-        default:
-            if (!option.equalsIgnoreCase("x")) {
-                System.out.println("The input is not valid. please re-enter");
-                displayMenu();
-            }
-    }
-}catch (BankException e){
-    System.out.println(e);
-
-}
+        }
 
     }
 
@@ -112,20 +125,17 @@ try {
     public void displayCustomerMenu(String loginUsername) throws BankException {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Select an option: ");
-        System.out.println("1) Apply for a new bank account");
-        System.out.println("2) View balance");
-        System.out.println("3) Making a deposit");
-        System.out.println("4) Withdrawing");
-        System.out.println("5) Make a transfer");
-        System.out.println("6) Accept pending transfer");
-        System.out.println("7) Logout");
-        int customerOption = scanner.nextInt();
+        logger.info("Select an option: ");
+        logger.info("1) Apply for a new bank account");
+        logger.info("2) View balance");
+        logger.info("3) Deposit");
+        logger.info("4) Withdraw");
+        logger.info("5) Make a transfer");
+        logger.info("6) Accept pending transfer");
+        logger.info("7) Logout");
+        String customerOption = scanner.next();
         switch (customerOption) {
-            case 7:
-                displayMenu();
-                break;
-            case 1:
+            case "1":
 
                 boolean status = true;
                 String checkingType = "Checking";
@@ -133,55 +143,53 @@ try {
                 while (status) {
 
 
-                    System.out.println("Select an option: ");
-                    System.out.println("1) Create a checking account.");
-                    System.out.println("2) Create a saving amount");
-                    System.out.println("3) Create a checking and a saving account");
+                    logger.info("Select an option: ");
+                    logger.info("1) Create a checking account.");
+                    logger.info("2) Create a saving amount");
+                    logger.info("3) Create a checking and a saving account");
                     int opt = scanner.nextInt();
                     if (opt == 1) {
-                        System.out.println("Enter the amount:");
+                        logger.info("Enter the amount:");
                         double amount = scanner.nextDouble();
                         if (amount < 0) {
-                            System.out.println("Amount entered is invalid. Please enter a positive value.");
-                            amount = scanner.nextDouble();
+                            logger.info("Amount entered is invalid. Please enter a positive value.");
                         } else {
                             customerService.applyForBankAccount(loginUsername, checkingType, amount);
-                            System.out.println("You successfully opened " + checkingType + " with the amount $" + amount);
+                            logger.info("You successfully opened " + checkingType + " with the amount $" + amount);
                             status = false;
                         }
 
                     } else if (opt == 2) {
-                        System.out.println("Enter the amount:");
+                        logger.info("Enter the amount:");
                         double amountsav = scanner.nextDouble();
                         if (amountsav < 0) {
-                            System.out.println("Amount entered is invalid. Please enter a positive value.");
+                            logger.info("Amount entered is invalid. Please enter a positive value.");
                             amountsav = scanner.nextDouble();
                         } else {
                             customerService.applyForBankAccount(loginUsername, savingType, amountsav);
-                            System.out.println("You successfully opened " + savingType + " with the amount $" + amountsav);
+                            logger.info("You successfully opened " + savingType + " with the amount $" + amountsav);
                             status = false;
                         }
                     } else if (opt == 3) {
-                        System.out.println("Enter the checking account amount");
+                        logger.info("Enter the checking account amount");
                         double checkingAmount = scanner.nextDouble();
                         if (checkingAmount < 0) {
-                            System.out.println("Amount entered is invalid. Please enter a positive value.");
-                            checkingAmount = scanner.nextDouble();
+                            logger.info("Amount entered is invalid. Please enter a different value.");
 
                         } else {
                             customerService.applyForBankAccount(loginUsername, checkingType, checkingAmount);
-                            System.out.println("You successfully opened " + checkingType + " with the amount $+" + checkingAmount);
+                            logger.info("You successfully opened " + checkingType + " with the amount $+" + checkingAmount);
 
                         }
 
-                        System.out.println("Enter the saving account amount");
+                        logger.info("Enter the saving account amount");
                         double savingAmount = scanner.nextDouble();
                         if (savingAmount < 0) {
-                            System.out.println("Amount entered is invalid. Please enter positive value.");
+                            logger.info("Amount entered is invalid. Please enter positive value.");
                             savingAmount = scanner.nextDouble();
                         } else {
                             customerService.applyForBankAccount(loginUsername, savingType, savingAmount);
-                            System.out.println("You successfully opened " + savingType + " with the amount $" + savingAmount);
+                            logger.info("You successfully opened " + savingType + " with the amount $" + savingAmount);
                         }
                         status = false;
                     } else {
@@ -193,156 +201,151 @@ try {
                 }
                 displayCustomerMenu(loginUsername);
                 break;
-            case 2:
+            case "2":
                 try {
 
                     List<BankAccount> list = new ArrayList<>();
                     list = customerService.viewBankAccount(loginUsername);
-                    System.out.println(loginUsername);
+                    logger.info(loginUsername);
                     for (BankAccount a : list) {
-                        System.out.println(a.getAccountType() + ": " + a.getBalance());
+                        logger.info(a.getAccountType() + ": " + a.getBalance());
                     }
                 } catch (BankException e) {
-                    System.out.println(e.getMessage());
-                }
-                 displayCustomerMenu(loginUsername);
-                break;
-            case 3:
-                try {
-                    String checking = "Checking";
-                    String saving = "Saving";
-                    System.out.println("Please select an option:");
-                    System.out.println("1) Deposit to your checking: ");
-                    System.out.println("2) Deposit to your saving: ");
-                    int choice = scanner.nextInt();
-                    if (choice == 1) {
-                        System.out.println("Enter an amount: ");
-                        double depositAmount = scanner.nextDouble();
-                        if (depositAmount >= 0) {
-                            customerService.deposit(loginUsername, checking, depositAmount);
-                            System.out.println("You successfully deposited $" + depositAmount + " to your " + checking + " account");
-                        } else {
-                            System.out.println("invalid amount. Please try again");
-                        }
-                    } else if (choice == 2) {
-                        System.out.println("Enter an amount: ");
-                        double depositSavingAmount = scanner.nextDouble();
-                        if (depositSavingAmount >= 0) {
-                            customerService.deposit(loginUsername, saving, depositSavingAmount);
-                            System.out.println("You successfully deposited $" + depositSavingAmount + " to your " + saving + " account");
-                        } else {
-                            System.out.println("Invalid amount. Please try again");
-                        }
-
-                    } else {
-                        System.out.println("Invalid input. Please re-select");
-                    }
-                } catch (BankException e) {
-                    System.out.println(e);
-                }
-                 displayCustomerMenu(loginUsername);
-                break;
-            case 4:
-                try {
-                    String checking = "Checking";
-                    String saving = "Saving";
-                    System.out.println("Please select an option:");
-                    System.out.println("1) Withdraw from your checking: ");
-                    System.out.println("2) Withdraw from your saving: ");
-                    int choice = scanner.nextInt();
-                    if (choice == 1) {
-                        System.out.println("Enter an amount: ");
-                        double withdrawAmount = scanner.nextDouble();
-                        if (withdrawAmount > 0) {
-                            customerService.withdraw(loginUsername, checking, withdrawAmount);
-                            System.out.println("You successfully withdrew $" + withdrawAmount + " from your " + checking + " account");
-                        } else {
-                            System.out.println("invalid amount. Please try again");
-                        }
-                    } else if (choice == 2) {
-                        System.out.println("Enter an amount: ");
-                        double withdrawSavingAmount = scanner.nextDouble();
-                        if (withdrawSavingAmount >= 0) {
-                            customerService.withdraw(loginUsername, saving, withdrawSavingAmount);
-                            System.out.println("You successfully withdrew $" + withdrawSavingAmount + " from your " + saving + " account");
-                        } else {
-                            System.out.println("Invalid amount. Please try again");
-                        }
-
-                    } else {
-                        System.out.println("Invalid input. Please re-select");
-                    }
-                } catch (BankException e) {
-                    System.out.println(e);
+                    logger.info(e.getMessage());
                 }
                 displayCustomerMenu(loginUsername);
                 break;
-            case 5:
+            case "3":
                 try {
                     String checking = "Checking";
                     String saving = "Saving";
-                    System.out.println("Please select an option:");
-                    System.out.println("1) Make a transfer from your checking:");
-                    System.out.println("2) Make a transfer from your saving:");
+                    logger.info("Please select an option:");
+                    logger.info("1) Deposit to your checking: ");
+                    logger.info("2) Deposit to your saving: ");
                     int choice = scanner.nextInt();
                     if (choice == 1) {
-                        System.out.println("Enter username of the account that you want to make a transfer to");
+                        logger.info("Enter an amount: ");
+                        double depositAmount = scanner.nextDouble();
+                        if (depositAmount >= 0) {
+                            customerService.deposit(loginUsername, checking, depositAmount);
+                            logger.info("You successfully deposited $" + depositAmount + " to your " + checking + " account");
+                        } else {
+                            logger.info("invalid amount. Please try again");
+                        }
+                    } else if (choice == 2) {
+                        logger.info("Enter an amount: ");
+                        double depositSavingAmount = scanner.nextDouble();
+                        if (depositSavingAmount >= 0) {
+                            customerService.deposit(loginUsername, saving, depositSavingAmount);
+                            logger.info("You successfully deposited $" + depositSavingAmount + " to your " + saving + " account");
+                        } else {
+                            logger.info("Invalid amount. Please try again");
+                        }
+                    } else {
+                        logger.info("Invalid input. Please re-select");
+                    }
+                } catch (BankException e) {
+                    logger.error(e);
+                }
+                displayCustomerMenu(loginUsername);
+                break;
+            case "4":
+                try {
+                    String checking = "Checking";
+                    String saving = "Saving";
+                    logger.info("Please select an option:");
+                    logger.info("1) Withdraw from your checking: ");
+                    logger.info("2) Withdraw from your saving: ");
+                    int choice = scanner.nextInt();
+                    if (choice == 1) {
+                        logger.info("Enter an amount: ");
+                        double withdrawAmount = scanner.nextDouble();
+                        if (withdrawAmount > 0) {
+                            customerService.withdraw(loginUsername, checking, withdrawAmount);
+                            logger.info("You successfully withdrew $" + withdrawAmount + " from your " + checking + " account");
+                        } else {
+                            logger.info("invalid amount. Please try again");
+                        }
+                    } else if (choice == 2) {
+                        logger.info("Enter an amount: ");
+                        double withdrawSavingAmount = scanner.nextDouble();
+                        if (withdrawSavingAmount >= 0) {
+                            customerService.withdraw(loginUsername, saving, withdrawSavingAmount);
+                            logger.info("You successfully withdrew $" + withdrawSavingAmount + " from your " + saving + " account");
+                        } else {
+                            logger.info("Invalid amount. Please try again");
+                        }
+
+                    } else {
+                        logger.info("Invalid input. Please re-select");
+                    }
+                } catch (BankException e) {
+                    logger.error(e);
+                }
+                displayCustomerMenu(loginUsername);
+                break;
+            case "5":
+                try {
+                    String checking = "Checking";
+                    String saving = "Saving";
+                    logger.info("Please select an option:");
+                    logger.info("1) Make a transfer from your checking:");
+                    logger.info("2) Make a transfer from your saving:");
+                    int choice = scanner.nextInt();
+                    if (choice == 1) {
+                        logger.info("Enter username of the account that you want to make a transfer to");
                         String toUsername = scanner.next();
-                        System.out.println("Enter an amount: ");
+                        logger.info("Enter an amount: ");
                         double transferAmount = scanner.nextDouble();
 
                         if (transferAmount > 0) {
                             customerService.makeTransfer(loginUsername, toUsername, checking, transferAmount);
-                            System.out.println("You successfully transferred $" + transferAmount + " to " + toUsername + " account");
+                            logger.info("You successfully transferred $" + transferAmount + " to " + toUsername + " account");
                         } else {
-                            System.out.println("invalid amount. Please try again");
+                            logger.info("invalid amount. Please try again");
                         }
                     } else if (choice == 2) {
-                        System.out.println("Enter username of the account that you want to make a transfer to");
+                        logger.info("Enter username of the account that you want to make a transfer to");
                         String toUsername = scanner.toString();
-                        System.out.println("Enter an amount: ");
+                        logger.info("Enter an amount: ");
                         double transferFromSavingAmount = scanner.nextDouble();
 
                         if (transferFromSavingAmount >= 0) {
                             customerService.makeTransfer(loginUsername, toUsername, saving, transferFromSavingAmount);
-                            System.out.println("You successfully transferred $" + transferFromSavingAmount + " to  " + toUsername + " account");
+                            logger.info("You successfully transferred $" + transferFromSavingAmount + " to  " + toUsername + " account");
                         } else {
-                            System.out.println("Invalid amount. Please try again");
+                            logger.info("Invalid amount. Please try again");
                         }
 
                     } else {
-                        System.out.println("Invalid input. Please re-select");
+                        logger.info("Invalid input. Please re-select");
                     }
 
                 } catch (BankException e) {
-                    System.out.println(e);
+                    logger.error(e);
                 }
-                 displayCustomerMenu(loginUsername);
+                displayCustomerMenu(loginUsername);
                 break;
-            case 6:
+            case "6":
 
                 customerService.displayPendingTransaction(loginUsername);
-                String checking = "Checking";
-                String saving = "Saving";
-                System.out.println("Please select an option:");
-                System.out.println("1) Deposit the pending transfer amount to your checking");
-                System.out.println("2) Deposit the pending transfer amount  to your checking");
+                logger.info("Enter transaction id that you what to accept:");
                 int option = scanner.nextInt();
-
-                switch (option) {
-                    case 1:
-                        customerService.acceptPendingTransfer(loginUsername, checking);
-                        break;
-                    case 2:
-                        customerService.acceptPendingTransfer(loginUsername, saving);
-                        break;
-                    default:
-                        System.out.println("Invalid input. Try again!");
-                        displayCustomerMenu(loginUsername);
+                boolean status1 = false;
+                status1 = customerService.acceptPendingTransfer(option);
+                if (status1 == true) {
+                    logger.info("You successfully accepted the transaction with the id  " + option);
+                } else {
+                    logger.info("Unsuccessfully accepted the transaction");
                 }
+                displayCustomerMenu(loginUsername);
+                break;
+
             default:
-                System.out.println("Invalid input. Please re-enter");
-                 displayCustomerMenu(loginUsername);
+                if(!customerOption.equals("7") || !customerOption.equalsIgnoreCase("x")) {
+                    logger.info("Invalid input. Please re-enter");
+                    displayMenu();
+                }
         }
 
     }
@@ -350,83 +353,72 @@ try {
     public void displayEmployeeMenu() {
 
         try {
-            System.out.println("Select an option: ");
-            System.out.println("1) View customer's bank account by customerID");
-            System.out.println("2) Display all pending accounts");
-            System.out.println("3) Approve account by customerID");
-            System.out.println("4) Reject account by customerID");
-            System.out.println("5) Display all the previous transaction from customers");
-            System.out.println("6) Logout");
+            logger.info("Select an option: ");
+            logger.info("1) View bank account by customerID");
+            logger.info("2) Display all pending accounts");
+            logger.info("3) Approve account by customerID");
+            logger.info("4) Reject account by customerID");
+            logger.info("5) Display all the previous transactions bu customer ID");
+            logger.info("6) Logout");
             Scanner scanner = new Scanner(System.in);
-            int option = scanner.nextInt();
+            String option = scanner.next();
             switch (option) {
-                case 1:
-                    System.out.println("Enter the customer ID: ");
+                case "1":
+                    logger.info("Enter the customer ID: ");
                     int id = scanner.nextInt();
                     List<BankAccount> list = new ArrayList<>();
                     list = employeeFunction.displayCustomerBankAccountById(id);
-                    System.out.println("Customer with an id: " + id);
+                    logger.info("Customer with an id: " + id);
                     for (BankAccount a : list) {
-                        System.out.println(a.getAccountType() + " account balance: $" + a.getBalance() + " , Previous transaction: $" + a.getPreviousTransaction());
+                        logger.info(a.getAccountType() + " account balance: $" + a.getBalance());
                     }
-                     displayEmployeeMenu();
+                    displayEmployeeMenu();
                     break;
-                case 2:
+                case "2":
                     List<Customer> list1 = new ArrayList<>();
                     list1 = employeeFunction.displayAllPendingCustomer();
                     for (Customer customer : list1) {
-                        System.out.println("Customer id:" + customer.getCustomerId() + "|| Name:" + customer.getCustomerName() + "|| Contact:" + customer.getContact());
+                        logger.info("Customer id:" + customer.getCustomerId() + "|| Name:" + customer.getCustomerName() + "|| Contact:" + customer.getContact());
                     }
-                     displayEmployeeMenu();
-                case 3:
-                    System.out.println("Please enter customer id");
+                    displayEmployeeMenu();
+                case "3":
+                    logger.info("Please enter customer id");
                     int customerId = scanner.nextInt();
                     boolean state = false;
                     state = employeeFunction.approveCustomerAccountById(customerId);
                     if (state == true) {
-                        System.out.println("The account with id: " + customerId + "  is approved");
+                        logger.info("The account with id: " + customerId + "  is approved");
                     } else {
-                        System.out.println("Unsuccessfully approve the account with id:  " + customerId);
+                        logger.info("Unsuccessfully approve the account with id:  " + customerId);
                     }
-                     displayEmployeeMenu();
+                    displayEmployeeMenu();
                     break;
-                case 4:
-                    System.out.println("Please enter customer id");
+                case "4":
+                    logger.info("Please enter customer id");
                     int customerIdReject = scanner.nextInt();
                     boolean state1 = false;
                     state1 = employeeFunction.rejectCustomerAccountById(customerIdReject);
                     if (state1 == true) {
-                        System.out.println("The account with id: " + customerIdReject + "  is rejected");
+                        logger.info("The account with id: " + customerIdReject + "  is rejected");
                     } else {
-                        System.out.println("Unsuccessfully reject the account with id:  " + customerIdReject);
-                    }
-                     displayEmployeeMenu();
-                    break;
-                case 5:
-                    System.out.println("Enter customer ID");
-                    int customerId1 = scanner.nextInt();
-                    List<BankAccount> list2 = new ArrayList<>();
-                    list2 = employeeFunction.displayCustomerBankAccountById(customerId1);
-                    if(list2.isEmpty()){
-                        System.out.println("Previous transaction not found for this id " + customerId1);
-                    }else{
-                        System.out.println("Customer Id :" + customerId1);
-                        for (BankAccount a: list2) {
-                            System.out.println(a.getAccountType() + " account has the previous transaction of " + a.getPreviousTransaction());
-                        }
+                        logger.info("Unsuccessfully reject the account with id:  " + customerIdReject);
                     }
                     displayEmployeeMenu();
                     break;
-                case 6:
-                    displayMenu();
+                case "5":
+                    logger.info("Enter customer ID");
+                    int customerId1 = scanner.nextInt();
+                    employeeFunction.displayPreviousTransactionById(customerId1);
+                    displayEmployeeMenu();
                     break;
-
                 default:
-                    System.out.println("Please re-select from 1-6");
-                     displayEmployeeMenu();
+                    if(!option.equals("6") || !option.equalsIgnoreCase("x")) {
+                        logger.info("Invalid input. Please re-enter");
+                        displayMenu();
+                    }
             }
         } catch (BankException e) {
-            System.out.println(e);
+            logger.error(e);
         }
 
     }

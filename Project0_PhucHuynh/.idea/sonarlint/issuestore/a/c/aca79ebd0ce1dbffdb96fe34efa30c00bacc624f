@@ -1,12 +1,0 @@
-
-X	java:S125""<This block of commented-out lines of code should be removed.(•¢¾Ä8¦Îû€/
-{
-java:S1450
-"YRemove the "connection" field and declare it as a local variable in the relevant methods.(’çù†ûÿÿÿÿ8¦Îû€/
-]	java:S125)"<This block of commented-out lines of code should be removed.(»£†Ôÿÿÿÿÿ8ª¢ş€/
-W
-java:S1118":Add a private constructor to hide the implicit public one.(ˆƒ™Ø8ª¢ş€/
-]	java:S125"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8¦Îû€/
-W	java:S125"<This block of commented-out lines of code should be removed.(†¸»O8ĞÁ½Å/
-]	java:S125"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ô“«ø/
-]	java:S125"<This block of commented-out lines of code should be removed.(äÿÉîşÿÿÿÿ8æÔ½Å/

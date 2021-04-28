@@ -1,6 +1,9 @@
 package org.bank.exeption;
 
-//throw exception
+/**
+ * This class is created to handle bankException
+ */
+
 public class BankException extends Exception {  // extend to the exception class
     public BankException() {
     }

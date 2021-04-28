@@ -1,6 +1,4 @@
 package org.bank.service.implementation;
-
-
 import org.bank.daos.BankAccountDAO;
 import org.bank.daos.implementation.BankAccountDAOImpl;
 import org.bank.daos.CustomerDAO;
@@ -20,7 +18,6 @@ public class CustomerServiceImplementation implements CustomerService {
 
     @Override
     public boolean validateAccount(String username, String password) throws BankException {
-
         boolean status = customerDAO.validateAccount(username, password);
         return status;
     }
@@ -32,7 +29,7 @@ public class CustomerServiceImplementation implements CustomerService {
 
     @Override
     public List<BankAccount> viewBankAccount(String username) throws BankException {
-        List<BankAccount> list  = new ArrayList<>();
+        List<BankAccount> list = new ArrayList<>();
         list = bankAccountDAO.viewBankAccount(username);
         return list;
     }
@@ -54,18 +51,18 @@ public class CustomerServiceImplementation implements CustomerService {
 
     @Override
     public void displayPendingTransaction(String username) throws BankException {
-        if(username.isEmpty()){
+        if (username.isEmpty()) {
             throw new BankException("No username is found");
-        }else {
+        } else {
             bankAccountDAO.displayPendingTransaction(username);
 
         }
     }
 
     @Override
-    public boolean acceptPendingTransfer(String username, String accountType) throws BankException {
+    public boolean acceptPendingTransfer(int pendingTransactionId) throws BankException {
         boolean status;
-            status = bankAccountDAO.acceptPendingTransfer(username, accountType);
+        status = bankAccountDAO.acceptPendingTransfer(pendingTransactionId);
         return status;
     }
     //the end

@@ -1,28 +1,27 @@
 package org.bank.model;
 
+/**
+ * Bank account model class is created to provide info about bank account and control access to the bank account data since
+ * the instance variables  in bank account are encapsulated
+ */
+
 
 public class BankAccount {
 
     private String accountType;
     private double balance;
-    private double  previousTransaction;
+
     private int accountId;
 
-    private double pendingTransaction;
-
-    public BankAccount(String accountType, double balance, double previousTransaction) {
+    public BankAccount(String accountType, double balance, int accountId) {
         this.accountType = accountType;
         this.balance = balance;
-        this.previousTransaction = previousTransaction;
-    }
-
-    public BankAccount(String accountType,double balance, double previousTransaction, int accountId) {
-        this.accountType = accountType;
-        this.balance = balance;
-        this.previousTransaction = previousTransaction;
         this.accountId = accountId;
     }
-    public BankAccount(){}
+
+
+    public BankAccount() {
+    }
 
     public String getAccountType() {
         return accountType;
@@ -40,21 +39,6 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public double getPreviousTransaction() {
-        return previousTransaction;
-    }
-
-    public void setPreviousTransaction(double previousTransaction) {
-        this.previousTransaction = previousTransaction;
-    }
-    public double getPendingTransaction() {
-        return pendingTransaction;
-    }
-
-    public void setPendingTransaction(double pendingTransaction) {
-        this.pendingTransaction = pendingTransaction;
-    }
-
     public int getAccountId() {
         return accountId;
     }
@@ -68,7 +52,6 @@ public class BankAccount {
         return "BankAccount{" +
                 "accountType='" + accountType + '\'' +
                 ", balance=" + balance +
-                ", previousTransaction=" + previousTransaction +
                 ", accountId=" + accountId +
                 '}';
     }

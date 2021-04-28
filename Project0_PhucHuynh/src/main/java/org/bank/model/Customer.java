@@ -1,23 +1,24 @@
 package org.bank.model;
+/**
+ * Customer model class is created to give provide info about bank customers and control access of the customer data since
+ * the instance variables  in customers account are encapsulated
+ */
 
-public class Customer  {
+public class Customer {
     private String username;
     private String password;
     private String customerName;
 
-    private long contact;
+    private String contact;
     private String status;
     private int customerId;
 
 
     //Constructors
-
-
-    public Customer(String username, String password, String customerName, long contact, String status, int customerId) {
+    public Customer(String username, String password, String customerName, String contact, String status, int customerId) {
         this.username = username;
         this.password = password;
         this.customerName = customerName;
-
 
 
         this.contact = contact;
@@ -26,14 +27,17 @@ public class Customer  {
 
     }
 
-    public Customer(String username, String password, String customerName,  long contact, String status) {
+    public Customer(String username, String password, String customerName, String contact, String status) {
         this.username = username;
         this.password = password;
-      this.customerName = customerName;
+        this.customerName = customerName;
         this.contact = contact;
         this.status = status;
     }
-    public Customer(){}
+
+
+    public Customer() {
+    }
 
     public String getUsername() {
         return username;
@@ -59,11 +63,11 @@ public class Customer  {
         this.customerName = customerName;
     }
 
-    public long getContact() {
+    public String getContact() {
         return contact;
     }
 
-    public void setContact(long contact) {
+    public void setContact(String contact) {
         this.contact = contact;
     }
 

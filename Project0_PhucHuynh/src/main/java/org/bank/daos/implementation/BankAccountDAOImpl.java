@@ -1,9 +1,11 @@
 package org.bank.daos.implementation;
 
+import org.apache.log4j.Logger;
 import org.bank.daos.BankAccountDAO;
 import org.bank.exeption.BankException;
 import org.bank.model.BankAccount;
 import org.bank.model.Customer;
+import org.bank.model.Transaction;
 import org.bank.postgressqlconnection.ConnectionManager;
 
 import java.sql.Connection;
@@ -13,7 +15,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is created to to act as DOA and communicate with database
+ */
+
+
 public class BankAccountDAOImpl implements BankAccountDAO {
+    private static Logger logger = Logger.getLogger(BankAccountDAOImpl.class);
+    /*
+     * this method takes username adn retrieve bank account information from the database
+     */
     @Override
     public List<BankAccount> viewBankAccount(String username) throws BankException {
         List<BankAccount> list = new ArrayList<>();
@@ -39,9 +50,8 @@ public class BankAccountDAOImpl implements BankAccountDAO {
                 bankAccount.setBalance(resultSet1.getDouble("balance"));
                 list.add(bankAccount);
             }
-            if (list.isEmpty()) {
-                throw new BankException("No account is found with this username " + username);
-            }
+            if (list.isEmpty()) throw new BankException("No account is found with this username " + username);
+
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -52,10 +62,16 @@ public class BankAccountDAOImpl implements BankAccountDAO {
         return list;
     }
 
+    /*
+     * this method takes customer username, accountType and amount and add it into the database and modify the previous
+     * transaction
+     */
+
     @Override
     public void deposit(String username, String accountType, double amount) throws BankException {
         Customer customer = new Customer();
         BankAccount bankAccount = new BankAccount();
+        BankAccount bankAccount1 = new BankAccount();
         try (Connection connection = ConnectionManager.getConnection()) {
             String sql = "select c.username, c.customer_id from mybank_schema.customer c where c.username = ?;\n";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -64,7 +80,6 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             while (resultSet.next()) {
                 customer.setCustomerId(resultSet.getInt("customer_id"));
             }
-
 
             String sql1 = "SELECT customer_id, account_type, balance\n" +
                     "FROM mybank_schema.bankaccount where customer_id = ?";
@@ -76,37 +91,59 @@ public class BankAccountDAOImpl implements BankAccountDAO {
                 bankAccount.setAccountType(resultSet1.getString("account_type"));
                 bankAccount.setBalance(resultSet1.getDouble("balance"));
             }
-
-            if (bankAccount == null) {
-                throw new BankException("Account not found.");
-            }
+            if(!bankAccount.getAccountType().equals(accountType)) throw new BankException("You don't have " + accountType + " account! Please try again");
             double newAmount = bankAccount.getBalance() + amount;
 
+            String sql3 = "select b.account_id from mybank_schema.bankaccount b where b.customer_id = ? and b.account_type = ?;\n";
+            PreparedStatement preparedStatement3 = connection.prepareStatement(sql3);
+            preparedStatement3.setInt(1, customer.getCustomerId());
+            preparedStatement3.setString(2, accountType);
+            ResultSet resultSet3 = preparedStatement3.executeQuery();
+            while (resultSet3.next()) {
+                bankAccount1.setAccountId(resultSet3.getInt("account_id"));
+            }
+
+            String sql4 = "INSERT INTO mybank_schema.\"transaction\"\n" +
+                    "(account_id, previous_transaction)\n" +
+                    "VALUES(?, ?);";
+
+            PreparedStatement preparedStatement4 = connection.prepareStatement(sql4);
+            preparedStatement4.setInt(1, bankAccount1.getAccountId());
+            preparedStatement4.setDouble(2, amount);
+
+            int c = preparedStatement4.executeUpdate();
+
+            //------------------------------------
             String sql2 = "UPDATE mybank_schema.bankaccount\n" +
-                    "SET balance = ?, previous_transaction = ? \n" +
+                    "SET balance = ?\n" +
                     "WHERE customer_id = ? and account_type = ?;";
+
 
             PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);
             preparedStatement2.setDouble(1, newAmount);
-            preparedStatement2.setDouble(2, amount);
-            preparedStatement2.setInt(3, customer.getCustomerId());
-            preparedStatement2.setString(4, accountType);
-            int c = preparedStatement2.executeUpdate();
+            preparedStatement2.setInt(2, customer.getCustomerId());
+            preparedStatement2.setString(3, accountType);
+            int c1 = preparedStatement2.executeUpdate();
 
 
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
 
 
     }
 
+    /*
+     * this method takes customer username, accountType and amount and retrieve that data and manipulate the data here by subtract the current amount by the requested amount
+     *  then update the database the database and modify the previous transaction
+     */
     @Override
     public void withdraw(String username, String accountType, double amount) throws BankException {
         Customer customer = new Customer();
         BankAccount bankAccount = new BankAccount();
+        BankAccount bankAccount1 = new BankAccount();
         try (Connection connection = ConnectionManager.getConnection()) {
             String sql = "select c.username, c.customer_id from mybank_schema.customer c where c.username = ?;\n";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -115,7 +152,6 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             while (resultSet.next()) {
                 customer.setCustomerId(resultSet.getInt("customer_id"));
             }
-
 
             String sql1 = "SELECT customer_id, account_type, balance\n" +
                     "FROM mybank_schema.bankaccount where customer_id = ?";
@@ -134,16 +170,37 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             if (bankAccount.getBalance() < amount) {
                 throw new BankException("Insufficient fund!");
             } else {
+
+
                 double newAmount = bankAccount.getBalance() - amount;
+                String sql3 = "select b.account_id from mybank_schema.bankaccount b where b.customer_id = ? and b.account_type = ?;\n";
+                PreparedStatement preparedStatement3 = connection.prepareStatement(sql3);
+                preparedStatement3.setInt(1, customer.getCustomerId());
+                preparedStatement3.setString(2, accountType);
+                ResultSet resultSet3 = preparedStatement3.executeQuery();
+                while (resultSet3.next()) {
+                    bankAccount1.setAccountId(resultSet3.getInt("account_id"));
+                }
+
+                String sql4 = "INSERT INTO mybank_schema.\"transaction\"\n" +
+                        "(account_id, previous_transaction)\n" +
+                        "VALUES(?, ?);";
+
+                PreparedStatement preparedStatement4 = connection.prepareStatement(sql4);
+                preparedStatement4.setInt(1, bankAccount1.getAccountId());
+                preparedStatement4.setDouble(2, -amount);
+
+                int c1 = preparedStatement4.executeUpdate();
+                //update teh balance
                 String sql2 = "UPDATE mybank_schema.bankaccount\n" +
-                        "SET balance = ?, previous_transaction = ? \n" +
+                        "SET balance = ? \n" +
                         "WHERE customer_id = ? and account_type = ?;";
 
                 PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);
                 preparedStatement2.setDouble(1, newAmount);
-                preparedStatement2.setDouble(2, -amount);
-                preparedStatement2.setInt(3, customer.getCustomerId());
-                preparedStatement2.setString(4, accountType);
+
+                preparedStatement2.setInt(2, customer.getCustomerId());
+                preparedStatement2.setString(3, accountType);
                 int c = preparedStatement2.executeUpdate();
             }
         } catch (SQLException throwables) {
@@ -154,14 +211,18 @@ public class BankAccountDAOImpl implements BankAccountDAO {
 
     }
 
-
+    /*
+     * This method takes usernames from both sender and receiver, account type you want to send money from and the amount
+     * after that it will retrieve the data and calculate  locally  then make a update to the database
+     *  Assumption: the transfer will go to the pending transaction queue and waiting for the receiver to accept it
+     */
     @Override
     public void makeTransfer(String fromUsername, String toUsername, String fromAccountType, double amount) throws BankException {
 
         Customer customer = new Customer();
         Customer customer1 = new Customer();
         BankAccount bankAccount = new BankAccount();
-
+        BankAccount bankAccount2 = new BankAccount();
         List<BankAccount> list = new ArrayList<>();
         try (Connection connection = ConnectionManager.getConnection()) {
 
@@ -172,7 +233,8 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             while (resultSet.next()) {
                 customer.setCustomerId(resultSet.getInt("customer_id"));
             }
-            if(customer.getCustomerId() < 0) throw new BankException("There is no customer account with the provided username " + fromUsername);
+            if (customer.getCustomerId() < 0)
+                throw new BankException("There is no customer account with the provided username " + fromUsername);
 
 
             String sql1 = "select c.username, c.customer_id from mybank_schema.customer c where c.username = ?;\n";
@@ -182,57 +244,69 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             while (resultSet1.next()) {
                 customer1.setCustomerId(resultSet1.getInt("customer_id"));
             }
-            String sql5 =  "SELECT account_type\n" +
-                    "FROM mybank_schema.bankaccount where customer_id = ?; ";
+            //checking if other user have a account w us
+            String sql5 = "SELECT account_id\n" +
+                    "FROM mybank_schema.bankaccount where customer_id = ? and account_type =?; ";
             PreparedStatement preparedStatement5 = connection.prepareStatement(sql5);
             preparedStatement5.setInt(1, customer1.getCustomerId());
+            preparedStatement5.setString(2, "Checking");
             ResultSet resultSet5 = preparedStatement5.executeQuery();
-            while (resultSet5.next()){
-                BankAccount bankAccount1 = new BankAccount();
-                bankAccount1.setAccountType(resultSet5.getString("account_type"));
-                list.add(bankAccount1);
-            }
-            if(list.isEmpty()) throw new BankException("The other user don't have an account with us! ");
 
-            String sql2 = "SELECT customer_id, account_type, balance\n" +
-                    "FROM mybank_schema.bankaccount where customer_id = ?";
+            while (resultSet5.next()) {
+
+                bankAccount2.setAccountId(resultSet5.getInt("account_id"));
+                list.add(bankAccount2);
+            }
+            if (list.isEmpty()) throw new BankException("The other user don't have an account with us! ");
+
+
+            String sql2 = "SELECT customer_id, balance, account_id\n" +
+                    "FROM mybank_schema.bankaccount where customer_id = ? and account_type =?;";
 
             PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);
             preparedStatement2.setInt(1, customer.getCustomerId());
+            preparedStatement2.setString(2, fromAccountType);
             ResultSet resultSet2 = preparedStatement2.executeQuery();
             if (resultSet2.next()) {
-                bankAccount.setAccountType(resultSet2.getString("account_type"));
-                bankAccount.setBalance(resultSet2.getFloat("balance"));
+                bankAccount.setBalance(resultSet2.getDouble("balance"));
+                bankAccount.setAccountId(resultSet2.getInt("account_id"));
             }
 
-            if (bankAccount == null) {
-                throw new BankException("Account not found.");
-            }
+            if (bankAccount.getBalance() < 0 || bankAccount.getAccountId() <0)  throw new BankException("Account not found.");
+
             if (bankAccount.getBalance() < amount) {
                 throw new BankException("Insufficient fund!");
             } else {
+
                 double newAmount = bankAccount.getBalance() - amount;
                 String sql3 = "UPDATE mybank_schema.bankaccount\n" +
-                        "SET balance = ?, previous_transaction = ? \n" +
+                        "SET balance = ? \n" +
                         "WHERE customer_id = ? and account_type = ?;";
 
                 PreparedStatement preparedStatement3 = connection.prepareStatement(sql3);
                 preparedStatement3.setDouble(1, newAmount);
-                preparedStatement3.setDouble(2, -amount);
-                preparedStatement3.setInt(3, customer.getCustomerId());
-                preparedStatement3.setString(4, fromAccountType);
+                preparedStatement3.setInt(2, customer.getCustomerId());
+                preparedStatement3.setString(3, fromAccountType);
                 int c = preparedStatement3.executeUpdate();
 
             }
 
-
-            String sql4 ="UPDATE mybank_schema.bankaccount\n" +
-                    "SET pending_transaction= ? \n" +
-                    "WHERE customer_id= ?\n";;
+            String sql4 = "INSERT INTO mybank_schema.\"transaction\"\n" +
+                    "(account_id, previous_transaction)\n" +
+                    "VALUES(?, ?);";
             PreparedStatement preparedStatement4 = connection.prepareStatement(sql4);
-            preparedStatement4.setDouble(1, amount);
-            preparedStatement4.setInt(2, customer1.getCustomerId());
+            preparedStatement4.setInt(1, bankAccount.getAccountId());
+            preparedStatement4.setDouble(2, -amount);
             int c1 = preparedStatement4.executeUpdate();
+
+
+            String sql6 = "INSERT INTO mybank_schema.\"transaction\"\n" +
+                    "(account_id, pending_transaction)\n" +
+                    "VALUES(?, ?);";
+            PreparedStatement preparedStatement6 = connection.prepareStatement(sql6);
+            preparedStatement6.setInt(1, bankAccount2.getAccountId());
+            preparedStatement6.setDouble(2, amount);
+            int c2 = preparedStatement6.executeUpdate();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -241,12 +315,19 @@ public class BankAccountDAOImpl implements BankAccountDAO {
         }
 
     }
+
+    /*
+     * This method takes the username and checking to see if there are any pending transactions waiting to accepted
+     * If yes, then it will display to the console with  the amount and transaction id
+     */
 
     @Override
     public void displayPendingTransaction(String username) throws BankException {
         Customer customer = new Customer();
         BankAccount bankAccount = new BankAccount();
-        try(Connection connection = ConnectionManager.getConnection()) {
+        Transaction transaction = new Transaction();
+        List<Transaction> list = new ArrayList<>();
+        try (Connection connection = ConnectionManager.getConnection()) {
 
             String sql = "select c.customer_id from mybank_schema.customer c where c.username = ?;\n";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -255,24 +336,34 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             while (resultSet.next()) {
                 customer.setCustomerId(resultSet.getInt("customer_id"));
             }
+            String sql3 = "select b.account_id from mybank_schema.bankaccount b where b.customer_id = ? and b.account_type =?;";
+            PreparedStatement preparedStatement3 = connection.prepareStatement(sql3);
+            preparedStatement3.setInt(1, customer.getCustomerId());
+            preparedStatement3.setString(2, "Checking");
+            ResultSet resultSet3 = preparedStatement3.executeQuery();
+            while (resultSet3.next()) {
+                bankAccount.setAccountId(resultSet3.getInt("account_id"));
+            }
+            if(bankAccount.getAccountId()< 0) throw new BankException("No saving account found with this csuomer id" + customer.getCustomerId());
+
             if (customer.getCustomerId() < 0)
                 throw new BankException("There is no customer id with the provided username " + username);
 
-            String sql1 = "SELECT pending_transaction\n" +
-                    "FROM mybank_schema.bankaccount where customer_id = ?";
+            String sql1 = "SELECT account_id, transaction_id , pending_transaction\n" +
+                    "FROM mybank_schema.transaction where account_id = ? and pending_transaction > 0; ";
 
             PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
-            preparedStatement1.setInt(1, customer.getCustomerId());
+            preparedStatement1.setInt(1, bankAccount.getAccountId());
             ResultSet resultSet1 = preparedStatement1.executeQuery();
 
+
             while (resultSet1.next()) {
-                bankAccount.setPendingTransaction(resultSet1.getDouble("pending_transaction"));
+                transaction.setPendingTransaction(resultSet1.getDouble("pending_transaction"));
+                transaction.setTransactionId(resultSet1.getInt("transaction_id"));
+                if(transaction.getPendingTransaction() < 0  || transaction.getTransactionId() <0) throw new BankException("No transaction foud with the account id " + bankAccount.getAccountId());
+                logger.info("Pending transaction id: " + transaction.getTransactionId() + " Amount: " + transaction.getPendingTransaction());
             }
-            if (bankAccount.getPendingTransaction() == 0) {
-                throw new BankException("There is no pending transaction");
-            } else {
-                System.out.println("We have a amount $" + bankAccount.getPendingTransaction() + " waiting to be accepted");
-            }
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -280,54 +371,79 @@ public class BankAccountDAOImpl implements BankAccountDAO {
         }
 
     }
+    /*
+     * This method allow the customer to input the transaction id and transfer the amount to the the checking account
+     */
 
     @Override
-    public boolean acceptPendingTransfer(String username, String accountType) throws BankException {
+    public boolean acceptPendingTransfer(int pendingTransactionId) throws BankException {
         Customer customer = new Customer();
         BankAccount bankAccount = new BankAccount();
-        try(Connection connection = ConnectionManager.getConnection()){
-            String sql = "select c.customer_id from mybank_schema.customer c where c.username = ?;\n";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, username);
+        BankAccount bankAccount1 = new BankAccount();
+        Transaction transaction = new Transaction();
+
+        try (Connection connection = ConnectionManager.getConnection()) {
+            if(pendingTransactionId<0) return false;
+            String spl = "SELECT account_id, pending_transaction\n" +
+                    "FROM mybank_schema.\"transaction\" where transaction_id = ?;";
+
+            PreparedStatement preparedStatement = connection.prepareStatement(spl);
+            preparedStatement.setInt(1, pendingTransactionId);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                customer.setCustomerId(resultSet.getInt("customer_id"));
+            if (resultSet.next()) {
+                bankAccount.setAccountId(resultSet.getInt("account_id"));
+                transaction.setPendingTransaction(resultSet.getDouble("pending_transaction"));
             }
+            if(transaction.getPendingTransaction() <=0) return false;
 
-            if(customer.getCustomerId() < 0) throw new BankException("There is no customer id with the provided username " +username);
 
-            String sql1 = "SELECT pending_transaction\n" +
-                    "FROM mybank_schema.bankaccount where customer_id = ?";
+            String sql1 = "SELECT balance FROM mybank_schema.bankaccount WHERE account_id = ?; ";
 
             PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
-            preparedStatement1.setInt(1, customer.getCustomerId());
+            preparedStatement1.setInt(1, bankAccount.getAccountId());
             ResultSet resultSet1 = preparedStatement1.executeQuery();
+            while (resultSet1.next()) {
+                bankAccount.setBalance(resultSet1.getDouble("balance"));
+            }
+            double newAmount = bankAccount.getBalance() + transaction.getPendingTransaction();
 
-            while(resultSet1.next()){
-                bankAccount.setPendingTransaction(resultSet1.getDouble("pending_transaction"));
-            }
-            if(bankAccount.getPendingTransaction() <=0 ) {
-                throw new BankException("invalid pending transaction amount");
-            }else {
-                deposit(username, accountType, bankAccount.getPendingTransaction());
-            }
-            String sql2 ="UPDATE mybank_schema.bankaccount\n" +
-                    "SET pending_transaction= ? \n" +
-                    "WHERE customer_id= ?\n";
+            String sql2 = "UPDATE mybank_schema.bankaccount\n" +
+                    "SET balance = ? \n" +
+                    "WHERE account_id = ?";
+
             PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);
-            preparedStatement2.setDouble(1, 0);
-            preparedStatement2.setInt(2, customer.getCustomerId());
-            int c = preparedStatement2.executeUpdate();
+            preparedStatement2.setDouble(1, newAmount);
+            preparedStatement2.setInt(2, bankAccount.getAccountId());
+
+            String sql4 = "INSERT INTO mybank_schema.\"transaction\"\n" +
+                    "(account_id, previous_transaction)\n" +
+                    "VALUES(?, ?);";
+            PreparedStatement preparedStatement4 = connection.prepareStatement(sql4);
+            preparedStatement4.setInt(1, bankAccount.getAccountId());
+            preparedStatement4.setDouble(2, transaction.getPendingTransaction());
+            int c1 = preparedStatement4.executeUpdate();
+
+            String sql5 = "DELETE FROM mybank_schema.\"transaction\"\n" +
+                    "WHERE transaction_id= ?;";
+
+            PreparedStatement preparedStatement3 = connection.prepareStatement(sql5);
+            preparedStatement3.setInt(1, pendingTransactionId);
+
+            int c2 = preparedStatement3.executeUpdate();
+
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         return true;
     }
+    /*
+     * This method takes customer id and return the account id
+     */
 
     @Override
-    public List <BankAccount> displayCustomerBankAccountById(int id) throws BankException {
+    public List<BankAccount> displayCustomerBankAccountById(int id) throws BankException {
         List<BankAccount> list = new ArrayList<>();
         try (Connection connection = ConnectionManager.getConnection()) {
             String sql = "SELECT account_type, previous_transaction, balance\n" +
@@ -337,52 +453,66 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()){
+            while (resultSet.next()) {
                 BankAccount bankAccount = new BankAccount();
                 bankAccount.setAccountType(resultSet.getString("account_type"));
                 bankAccount.setBalance(resultSet.getDouble("balance"));
-                bankAccount.setPreviousTransaction(resultSet.getDouble("previous_transaction"));
                 list.add(bankAccount);
             }
 
-            if(list.isEmpty()){
-                throw new BankException("No bank account with customer id " + id);
-            }
+            if (list.isEmpty()) throw new BankException("No bank account with customer id " + id);
+
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return list ;
+        return list;
     }
 
-
+    /*
+     * This method takes customer id and display all the transaction with account id that customer have
+     */
     @Override
-    public List<BankAccount> displayPreviousTransactionById(int customerId) throws BankException {
-        List<BankAccount> list = new ArrayList<>();
-        try(Connection connection = ConnectionManager.getConnection();) {
-            String sql = "SELECT account_type, previous_transaction\n" +
+    public void displayPreviousTransactionById(int customerId) throws BankException {
+        List<Transaction> list = new ArrayList<>();
+        BankAccount bankAccount = new BankAccount();
+        Transaction transaction = new Transaction();
+        try (Connection connection = ConnectionManager.getConnection()) {
+            String sql = "SELECT account_id\n" +
                     "FROM mybank_schema.bankaccount where customer_id = ? ;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, customerId);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()){
-                BankAccount bankAccount = new BankAccount();
-                bankAccount.setAccountType(resultSet.getString("account_type"));
-                bankAccount.setPreviousTransaction(resultSet.getDouble("previous_transaction"));
-                list.add(bankAccount);
+            while (resultSet.next()) {
+                bankAccount.setAccountId(resultSet.getInt("account_id"));
+                int a = bankAccount.getAccountId();
+                logger.info("Account ID: " + a);
+                String sql1 = "SELECT previous_transaction\n" +
+                        "FROM mybank_schema.\"transaction\" WHERE account_id =? and previous_transaction != 0;";
+                PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
+                preparedStatement1.setInt(1, a);
+                ResultSet resultSet1 = preparedStatement1.executeQuery();
+                while (resultSet1.next()) {
+                    transaction.setPreviousTransaction(resultSet1.getDouble("previous_transaction"));
+                    list.add(transaction);
+                    logger.info(transaction.getPreviousTransaction());
+                }
             }
-            if(list.isEmpty()) throw new BankException("No previous transaction found for this customer id " + customerId);
+
+            if (list.isEmpty()) throw new BankException("No account found  found for this customer id " + customerId);
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
-        return list;
     }
+    /*
+     * This method takes username, account type and amount, open an account for the customer after evaluating to see if the customer is approved to open an bank account
+     *
+     */
 
     @Override
     public void applyForBankAccount(String username, String accountType, double amount) throws BankException {
@@ -398,9 +528,9 @@ public class BankAccountDAOImpl implements BankAccountDAO {
                 customer.setCustomerId(resultSet.getInt("customer_id"));
                 customer.setStatus(resultSet.getString("status"));
             }
-            if(customer.getStatus().equals("Pending")){
+            if (customer.getStatus().equals("Pending")) {
                 throw new BankException("Your account is still pending to be approved. Thank you!");
-            }else {
+            } else {
 
                 String sql2 = "SELECT account_type\n" +
                         "FROM mybank_schema.bankaccount where customer_id = ?; ";
@@ -411,24 +541,12 @@ public class BankAccountDAOImpl implements BankAccountDAO {
                 while (resultSet1.next()) {
                     BankAccount bankAccount = new BankAccount();
                     bankAccount.setAccountType(resultSet1.getString("account_type"));
-                   /*); =  if (accountType.equals(bankType)) {
-                        throw new BankException("You already have a " + accountType + " account");
-                    } else {
-                        String sql1 = "INSERT INTO mybank_schema.bankaccount\n" +
-                                "(customer_id, account_type, balance)\n" +
-                                "VALUES(?, ?, ?);\n";
-                        PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
-                        preparedStatement1.setInt(1, customer.getCustomerId());
-                        preparedStatement1.setString(2, accountType);
-                        preparedStatement1.setDouble(3, amount);
-                        int c = preparedStatement1.executeUpdate();
-                    }*/
                     list.add(bankAccount);
 
                 }
-                for(BankAccount account: list){
+                for (BankAccount account : list) {
                     String accountTyp = account.getAccountType();
-                    if(accountTyp.equals(accountType)){
+                    if (accountTyp.equals(accountType)) {
                         throw new BankException("You already have a " + accountType + " account");
                     }
                 }
@@ -443,9 +561,9 @@ public class BankAccountDAOImpl implements BankAccountDAO {
                 int c = preparedStatement1.executeUpdate();
             }
         } catch (SQLException throwables) {
-            System.out.println(throwables);
+          logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            System.out.println(e);
+            logger.error(e);
         }
     }
 }
