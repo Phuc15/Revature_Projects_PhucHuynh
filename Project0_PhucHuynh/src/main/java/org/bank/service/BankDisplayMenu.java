@@ -141,8 +141,6 @@ public class BankDisplayMenu {
                 String checkingType = "Checking";
                 String savingType = "Saving";
                 while (status) {
-
-
                     logger.info("Select an option: ");
                     logger.info("1) Create a checking account.");
                     logger.info("2) Create a saving amount");
