@@ -1,0 +1,5 @@
+
+{
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "status".(ğ›‹8¼Ùï¶‘/
+T
+java:S1854 "8Remove this useless assignment to local variable "list".(Š¥ËV8¾Ùï¶‘/
