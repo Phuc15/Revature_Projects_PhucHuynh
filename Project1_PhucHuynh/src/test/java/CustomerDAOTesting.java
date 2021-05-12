@@ -28,10 +28,10 @@ public class CustomerDAOTesting {
     public void approveCustomerAccountByIdShoudlPass(){
         Assertions.assertEquals(true, customerDAO.approveCustomerAccountById(12));
     }*/
-    @Test
+    /*@Test
     public void approveCustomerAccountByIdShoudlFail(){
         Assertions.assertEquals(false, customerDAO.approveCustomerAccountById(-10));
-    }
+    }*/
 }
 
 

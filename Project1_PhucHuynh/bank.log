@@ -3243,3 +3243,1066 @@
 [INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         Apr-28-21 Wednesday PDT 10:37:47      
 [INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         Apr-28-21 Wednesday PDT 10:37:47      
 [INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         Apr-28-21 Wednesday PDT 10:37:47      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-06-21 Thursday PDT 22:56:20      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-06-21 Thursday PDT 22:56:20      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-06-21 Thursday PDT 22:56:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-06-21 Thursday PDT 22:56:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-06-21 Thursday PDT 22:56:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-06-21 Thursday PDT 22:56:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-06-21 Thursday PDT 22:56:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-06-21 Thursday PDT 22:56:20      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-06-21 Thursday PDT 23:34:30      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-06-21 Thursday PDT 23:34:30      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-06-21 Thursday PDT 23:34:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-06-21 Thursday PDT 23:34:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-06-21 Thursday PDT 23:34:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-06-21 Thursday PDT 23:34:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-06-21 Thursday PDT 23:34:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-06-21 Thursday PDT 23:34:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter your username:         May-06-21 Thursday PDT 23:34:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter your password:         May-06-21 Thursday PDT 23:34:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-06-21 Thursday PDT 23:34:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) Apply for a new bank account         May-06-21 Thursday PDT 23:34:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) View balance         May-06-21 Thursday PDT 23:34:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Deposit         May-06-21 Thursday PDT 23:34:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Withdraw         May-06-21 Thursday PDT 23:34:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Make a transfer         May-06-21 Thursday PDT 23:34:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Accept pending transfer         May-06-21 Thursday PDT 23:34:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    7) Logout         May-06-21 Thursday PDT 23:34:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    phuch         May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Saving: 24888.0         May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Checking: 24646.0         May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) Apply for a new bank account         May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) View balance         May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Deposit         May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Withdraw         May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Make a transfer         May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Accept pending transfer         May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    7) Logout         May-06-21 Thursday PDT 23:35:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Please select an option:         May-06-21 Thursday PDT 23:35:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) Deposit to your checking:          May-06-21 Thursday PDT 23:35:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Deposit to your saving:          May-06-21 Thursday PDT 23:35:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter an amount:          May-06-21 Thursday PDT 23:35:06      
+[INFO]    - {org.bank.service.BankDisplayMenu}    You successfully deposited $1333.0 to your Checking account         May-06-21 Thursday PDT 23:35:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-06-21 Thursday PDT 23:35:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) Apply for a new bank account         May-06-21 Thursday PDT 23:35:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) View balance         May-06-21 Thursday PDT 23:35:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Deposit         May-06-21 Thursday PDT 23:35:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Withdraw         May-06-21 Thursday PDT 23:35:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Make a transfer         May-06-21 Thursday PDT 23:35:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Accept pending transfer         May-06-21 Thursday PDT 23:35:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    7) Logout         May-06-21 Thursday PDT 23:35:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Invalid input. Please re-enter         May-06-21 Thursday PDT 23:35:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-06-21 Thursday PDT 23:35:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-06-21 Thursday PDT 23:35:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-06-21 Thursday PDT 23:35:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-06-21 Thursday PDT 23:35:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-06-21 Thursday PDT 23:35:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 07:04:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 07:04:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 07:04:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 07:04:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 07:04:40      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-07-21 Friday PDT 09:23:38      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-07-21 Friday PDT 09:23:38      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-07-21 Friday PDT 09:23:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 09:23:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 09:23:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 09:23:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 09:23:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 09:23:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter your username:         May-07-21 Friday PDT 09:23:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter your password:         May-07-21 Friday PDT 09:23:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 09:23:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) Apply for a new bank account         May-07-21 Friday PDT 09:23:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) View balance         May-07-21 Friday PDT 09:23:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Deposit         May-07-21 Friday PDT 09:23:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Withdraw         May-07-21 Friday PDT 09:23:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Make a transfer         May-07-21 Friday PDT 09:23:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Accept pending transfer         May-07-21 Friday PDT 09:23:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    7) Logout         May-07-21 Friday PDT 09:23:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Please select an option:         May-07-21 Friday PDT 09:23:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) Make a transfer from your checking:         May-07-21 Friday PDT 09:23:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Make a transfer from your saving:         May-07-21 Friday PDT 09:23:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter username of the account that you want to make a transfer to         May-07-21 Friday PDT 09:23:59      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter an amount:          May-07-21 Friday PDT 09:24:05      
+[INFO]    - {org.bank.service.BankDisplayMenu}    You successfully transferred $100.0 to phuch account         May-07-21 Friday PDT 09:24:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 09:24:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) Apply for a new bank account         May-07-21 Friday PDT 09:24:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) View balance         May-07-21 Friday PDT 09:24:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Deposit         May-07-21 Friday PDT 09:24:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Withdraw         May-07-21 Friday PDT 09:24:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Make a transfer         May-07-21 Friday PDT 09:24:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Accept pending transfer         May-07-21 Friday PDT 09:24:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    7) Logout         May-07-21 Friday PDT 09:24:12      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Invalid input. Please re-enter         May-07-21 Friday PDT 09:24:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 09:24:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 09:24:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 09:24:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 09:24:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 09:24:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 09:24:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 09:24:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 09:24:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 09:24:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 09:24:20      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-07-21 Friday PDT 09:25:28      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-07-21 Friday PDT 09:25:28      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-07-21 Friday PDT 09:25:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 09:25:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 09:25:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 09:25:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 09:25:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 09:25:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter your username:         May-07-21 Friday PDT 09:25:36      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter your password:         May-07-21 Friday PDT 09:25:39      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 09:25:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) Apply for a new bank account         May-07-21 Friday PDT 09:25:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) View balance         May-07-21 Friday PDT 09:25:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Deposit         May-07-21 Friday PDT 09:25:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Withdraw         May-07-21 Friday PDT 09:25:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Make a transfer         May-07-21 Friday PDT 09:25:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Accept pending transfer         May-07-21 Friday PDT 09:25:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    7) Logout         May-07-21 Friday PDT 09:25:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3 100.0         May-07-21 Friday PDT 09:25:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter transaction id that you what to accept:         May-07-21 Friday PDT 09:25:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    You successfully accepted the transaction with the id  3         May-07-21 Friday PDT 09:25:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 09:25:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) Apply for a new bank account         May-07-21 Friday PDT 09:25:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) View balance         May-07-21 Friday PDT 09:25:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Deposit         May-07-21 Friday PDT 09:25:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Withdraw         May-07-21 Friday PDT 09:25:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Make a transfer         May-07-21 Friday PDT 09:25:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Accept pending transfer         May-07-21 Friday PDT 09:25:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    7) Logout         May-07-21 Friday PDT 09:25:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Invalid input. Please re-enter         May-07-21 Friday PDT 09:26:33      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 09:26:33      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 09:26:33      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 09:26:33      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 09:26:33      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 09:26:33      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 09:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 09:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 09:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 09:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 09:26:35      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-07-21 Friday PDT 10:11:50      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-07-21 Friday PDT 10:11:50      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-07-21 Friday PDT 10:11:50      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 10:11:50      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 10:11:50      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 10:11:50      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 10:11:50      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 10:11:50      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter your username:         May-07-21 Friday PDT 10:11:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter your password:         May-07-21 Friday PDT 10:11:58      
+[ERROR]    - {org.bank.service.BankDisplayMenu}    org.bank.exeption.BankException: Account not found. Please try again         May-07-21 Friday PDT 10:12:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 10:12:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 10:12:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 10:12:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 10:12:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 10:12:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-07-21 Friday PDT 10:12:10      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-07-21 Friday PDT 10:12:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 10:12:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-07-21 Friday PDT 10:12:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-07-21 Friday PDT 10:12:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-07-21 Friday PDT 10:12:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-07-21 Friday PDT 10:12:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-07-21 Friday PDT 10:12:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-07-21 Friday PDT 10:12:20      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-07-21 Friday PDT 10:12:27      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-07-21 Friday PDT 10:12:57      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-07-21 Friday PDT 10:12:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 10:12:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-07-21 Friday PDT 10:12:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-07-21 Friday PDT 10:12:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-07-21 Friday PDT 10:12:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-07-21 Friday PDT 10:12:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-07-21 Friday PDT 10:12:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-07-21 Friday PDT 10:12:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Invalid input. Please re-enter         May-07-21 Friday PDT 10:15:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 10:15:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 10:15:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 10:15:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 10:15:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 10:15:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 10:15:26      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 10:15:26      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 10:15:26      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 10:15:26      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 10:15:26      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-07-21 Friday PDT 10:20:39      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-07-21 Friday PDT 10:20:39      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-07-21 Friday PDT 10:20:39      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 10:20:39      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 10:20:39      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 10:20:39      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 10:20:39      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 10:20:39      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-07-21 Friday PDT 10:20:48      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-07-21 Friday PDT 10:20:51      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 10:20:54      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-07-21 Friday PDT 10:20:54      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-07-21 Friday PDT 10:20:54      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-07-21 Friday PDT 10:20:54      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-07-21 Friday PDT 10:20:54      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-07-21 Friday PDT 10:20:54      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-07-21 Friday PDT 10:20:54      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-07-21 Friday PDT 10:20:58      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-07-21 Friday PDT 10:21:04      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-07-21 Friday PDT 10:21:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 10:21:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-07-21 Friday PDT 10:21:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-07-21 Friday PDT 10:21:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-07-21 Friday PDT 10:21:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-07-21 Friday PDT 10:21:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-07-21 Friday PDT 10:21:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-07-21 Friday PDT 10:21:04      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-07-21 Friday PDT 12:10:08      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-07-21 Friday PDT 12:10:08      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-07-21 Friday PDT 12:10:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 12:10:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 12:10:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 12:10:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 12:10:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 12:10:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter your username:         May-07-21 Friday PDT 12:10:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter your password:         May-07-21 Friday PDT 12:10:17      
+[ERROR]    - {org.bank.service.BankDisplayMenu}    org.bank.exeption.BankException: Account is not found. Please try again!         May-07-21 Friday PDT 12:10:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 12:10:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 12:10:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 12:10:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 12:10:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 12:10:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-07-21 Friday PDT 12:10:22      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-07-21 Friday PDT 12:10:25      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 12:10:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-07-21 Friday PDT 12:10:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-07-21 Friday PDT 12:10:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-07-21 Friday PDT 12:10:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-07-21 Friday PDT 12:10:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-07-21 Friday PDT 12:10:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-07-21 Friday PDT 12:10:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-07-21 Friday PDT 12:10:36      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-07-21 Friday PDT 12:10:39      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-07-21 Friday PDT 12:10:39      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 12:10:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-07-21 Friday PDT 12:10:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-07-21 Friday PDT 12:10:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-07-21 Friday PDT 12:10:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-07-21 Friday PDT 12:10:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-07-21 Friday PDT 12:10:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-07-21 Friday PDT 12:10:40      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-07-21 Friday PDT 12:13:00      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-07-21 Friday PDT 12:13:00      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-07-21 Friday PDT 12:13:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-07-21 Friday PDT 12:13:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-07-21 Friday PDT 12:13:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-07-21 Friday PDT 12:13:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-07-21 Friday PDT 12:13:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-07-21 Friday PDT 12:13:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-07-21 Friday PDT 12:13:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-07-21 Friday PDT 12:13:09      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 12:13:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-07-21 Friday PDT 12:13:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-07-21 Friday PDT 12:13:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-07-21 Friday PDT 12:13:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-07-21 Friday PDT 12:13:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-07-21 Friday PDT 12:13:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-07-21 Friday PDT 12:13:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-07-21 Friday PDT 12:13:16      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-07-21 Friday PDT 12:13:19      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-07-21 Friday PDT 12:13:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-07-21 Friday PDT 12:13:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-07-21 Friday PDT 12:13:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-07-21 Friday PDT 12:13:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-07-21 Friday PDT 12:13:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-07-21 Friday PDT 12:13:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-07-21 Friday PDT 12:13:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-07-21 Friday PDT 12:13:19      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:21:02      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:21:02      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:21:02      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:21:02      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:21:02      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:21:02      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:21:02      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:21:02      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:21:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:21:11      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Your username and password are invalid. Please try again!         May-09-21 Sunday PDT 17:21:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:21:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:21:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:21:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:21:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:21:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:21:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:21:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:21:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:21:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:21:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:21:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:21:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:21:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:21:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:21:32      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:21:37      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:21:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:21:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:21:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:21:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:21:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:21:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:21:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:21:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Invalid input. Please re-enter         May-09-21 Sunday PDT 17:21:59      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:21:59      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:21:59      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:21:59      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:21:59      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:21:59      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:22:01      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:22:01      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:22:01      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:22:01      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:22:01      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:24:57      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:24:57      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:24:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:24:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:24:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:24:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:24:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:24:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:25:02      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:25:05      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:25:09      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:25:09      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:25:09      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:25:09      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:25:09      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:25:09      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:25:09      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:25:13      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:25:16      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:25:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:25:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:25:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:25:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:25:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:25:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:25:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:25:16      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:26:21      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:26:21      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:26:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:26:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:26:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:26:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:26:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:26:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:26:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:26:36      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:26:41      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:26:41      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:26:41      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:26:41      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:26:41      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:26:41      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:26:41      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:26:44      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:26:49      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:26:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:26:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:26:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:26:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:26:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:26:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:26:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:26:49      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:26:56      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:26:56      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:26:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:26:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:26:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:26:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:26:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:26:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:27:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:27:14      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:27:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:27:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:27:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:27:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:27:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:27:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:27:18      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:27:20      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:27:24      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:27:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:27:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:27:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:27:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:27:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:27:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:27:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:27:24      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:32:45      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:32:45      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:32:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:32:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:32:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:32:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:32:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:32:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    The input is not valid. please re-enter         May-09-21 Sunday PDT 17:32:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:32:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:32:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:32:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:32:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:32:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:32:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:32:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:33:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:33:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:33:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:33:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:33:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:33:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:33:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:33:07      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:33:13      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:33:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:33:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:33:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:33:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:33:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:33:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:33:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:33:13      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:35:55      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:35:55      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:35:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:35:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:35:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:35:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:35:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:35:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:36:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:36:04      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:36:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:36:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:36:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:36:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:36:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:36:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:36:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:36:11      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:36:16      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:36:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:36:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:36:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:36:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:36:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:36:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:36:16      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:36:16      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:38:45      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:38:45      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:38:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:38:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:38:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:38:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:38:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:38:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:38:54      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:38:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Your username and password are invalid. Please try again!         May-09-21 Sunday PDT 17:39:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:39:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:39:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:39:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:39:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:39:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:39:02      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:39:05      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:39:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:39:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:39:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:39:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:39:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:39:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:39:08      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:39:11      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:39:15      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:39:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:39:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:39:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:39:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:39:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:39:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:39:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:39:15      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:41:24      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:41:24      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:41:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:41:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:41:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:41:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:41:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:41:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:41:31      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:41:34      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:41:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:41:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:41:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:41:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:41:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:41:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:41:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:41:39      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:41:44      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:41:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:41:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:41:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:41:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:41:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:41:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:41:44      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:41:44      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:42:13      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:42:13      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:42:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:42:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:42:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:42:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:42:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:42:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:42:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:42:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:42:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:42:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:42:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:42:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:42:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:42:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:42:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:42:29      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:42:32      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:42:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:42:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:42:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:42:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:42:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:42:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:42:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:42:32      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:44:34      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:44:34      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:44:34      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:44:34      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:44:34      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:44:34      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:44:34      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:44:34      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:44:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:44:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:44:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:44:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:44:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:44:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:44:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:44:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:44:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:44:57      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:45:00      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:45:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:45:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:45:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:45:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:45:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:45:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:45:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:45:00      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:50:40      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:50:40      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:50:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:50:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:50:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:50:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:50:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:50:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:50:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:50:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:50:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:50:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:50:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:50:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:50:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:50:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:50:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:50:57      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:51:00      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:51:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:51:01      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:51:01      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:51:01      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:51:01      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:51:01      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:51:01      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:51:01      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:51:22      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:51:22      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:51:22      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:51:22      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:51:22      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:51:22      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:51:22      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:51:22      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:51:46      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:51:49      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:51:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:51:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:51:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:51:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:51:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:51:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:51:52      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:51:54      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:51:58      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:51:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:51:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:51:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:51:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:51:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:51:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:51:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:51:58      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:52:37      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:52:37      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:52:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:52:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:52:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:52:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:52:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:52:37      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:55:10      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:55:14      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:55:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:55:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:55:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:55:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:55:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:55:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:55:21      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:55:25      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:55:38      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:55:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:55:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:55:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:55:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:55:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:55:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:55:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:55:38      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Invalid input. Please re-enter         May-09-21 Sunday PDT 17:55:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:55:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:55:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:55:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:55:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:55:56      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:55:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:55:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:55:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:55:58      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:55:58      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 17:59:35      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 17:59:35      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 17:59:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 17:59:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 17:59:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 17:59:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 17:59:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 17:59:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 17:59:42      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 17:59:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:59:48      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:59:48      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:59:48      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:59:48      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:59:48      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:59:48      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:59:48      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 17:59:51      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 17:59:54      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 17:59:54      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 17:59:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 17:59:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 17:59:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 17:59:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 17:59:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 17:59:55      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 17:59:55      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 18:01:19      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 18:01:19      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 18:01:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 18:01:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 18:01:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 18:01:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 18:01:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 18:01:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 18:01:29      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 18:01:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Your username and password are invalid. Please try again!         May-09-21 Sunday PDT 18:01:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 18:01:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 18:01:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 18:01:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 18:01:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 18:01:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 18:01:53      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 18:01:57      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 18:02:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 18:02:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 18:02:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 18:02:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 18:02:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 18:02:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 18:02:00      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter customer ID         May-09-21 Sunday PDT 18:02:03      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-09-21 Sunday PDT 18:02:07      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-09-21 Sunday PDT 18:02:07      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 18:02:07      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 18:02:07      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 18:02:07      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 18:02:07      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 18:02:07      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 18:02:07      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 18:02:07      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Invalid input. Please re-enter         May-09-21 Sunday PDT 18:03:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 18:03:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 18:03:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 18:03:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 18:03:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 18:03:28      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 18:03:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 18:03:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 18:03:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 18:03:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 18:03:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 18:03:33      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 18:03:33      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 18:03:33      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 18:03:33      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 18:03:33      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 22:26:15      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 22:26:15      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 22:26:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 22:26:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 22:26:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 22:26:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 22:26:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 22:26:15      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 22:26:19      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 22:26:30      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 22:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 22:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 22:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 22:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 22:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 22:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 22:26:35      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Please enter customer id         May-09-21 Sunday PDT 22:26:40      
+[INFO]    - {org.bank.service.BankDisplayMenu}    The account with id: 22  is approved         May-09-21 Sunday PDT 22:26:51      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 22:26:51      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 22:26:51      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 22:26:51      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 22:26:51      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 22:26:51      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 22:26:51      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 22:26:51      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 22:28:13      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 22:28:13      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 22:28:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 22:28:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 22:28:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 22:28:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 22:28:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 22:28:13      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Emter username:         May-09-21 Sunday PDT 22:28:24      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Enter password:         May-09-21 Sunday PDT 22:28:27      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 22:28:31      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 22:28:31      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 22:28:31      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 22:28:31      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 22:28:31      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 22:28:31      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 22:28:31      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Customer id:23|| Name:kate|| Contact:206-989-2133         May-09-21 Sunday PDT 22:28:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 22:28:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 22:28:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 22:28:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 22:28:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 22:28:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 22:28:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 22:28:45      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Please enter customer id         May-09-21 Sunday PDT 22:29:11      
+[INFO]    - {org.bank.service.BankDisplayMenu}    The account with id: 23  is approved         May-09-21 Sunday PDT 22:29:17      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Select an option:          May-09-21 Sunday PDT 22:29:17      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1) View bank account by customerID         May-09-21 Sunday PDT 22:29:17      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2) Display all pending accounts         May-09-21 Sunday PDT 22:29:17      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3) Approve account by customerID         May-09-21 Sunday PDT 22:29:17      
+[INFO]    - {org.bank.service.BankDisplayMenu}    4) Reject account by customerID         May-09-21 Sunday PDT 22:29:17      
+[INFO]    - {org.bank.service.BankDisplayMenu}    5) Display all the previous transactions bu customer ID         May-09-21 Sunday PDT 22:29:17      
+[INFO]    - {org.bank.service.BankDisplayMenu}    6) Logout         May-09-21 Sunday PDT 22:29:17      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Invalid input. Please re-enter         May-09-21 Sunday PDT 22:31:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 22:31:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 22:31:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 22:31:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 22:31:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 22:31:32      
+[INFO]    - {org.bank.service.BankDisplayMenu}    Please enter customer id         May-09-21 Sunday PDT 22:31:34      
+[INFO]    - {org.bank.service.BankMain}    ------------------------------------------------------         May-09-21 Sunday PDT 22:31:47      
+[INFO]    - {org.bank.service.BankMain}    Welcome to Billy Bank!!!!          May-09-21 Sunday PDT 22:31:47      
+[INFO]    - {org.bank.service.BankMain}    -------------------------------------------------------         May-09-21 Sunday PDT 22:31:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    please select an option:         May-09-21 Sunday PDT 22:31:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    1. Log in as an existing customer         May-09-21 Sunday PDT 22:31:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    2. Log in as an employee         May-09-21 Sunday PDT 22:31:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    3. Sign up for a new customer account         May-09-21 Sunday PDT 22:31:47      
+[INFO]    - {org.bank.service.BankDisplayMenu}    x. Exiting the System         May-09-21 Sunday PDT 22:31:47      
+[INFO]    - {org.bank.service.BankMain}    3) Deposit         May-10-21 Monday PDT 17:34:36      
+[INFO]    - {org.bank.service.BankMain}    4) Withdraw         May-10-21 Monday PDT 17:34:36      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 17:34:36      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 17:34:36      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 17:34:36      
+[INFO]    - {org.bank.service.BankMain}    3) Deposit         May-10-21 Monday PDT 17:35:53      
+[INFO]    - {org.bank.service.BankMain}    4) Withdraw         May-10-21 Monday PDT 17:35:53      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 17:35:53      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 17:35:53      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 17:35:53      
+[INFO]    - {org.bank.service.BankMain}    3) Deposit         May-10-21 Monday PDT 17:59:26      
+[INFO]    - {org.bank.service.BankMain}    4) Withdraw         May-10-21 Monday PDT 17:59:26      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 17:59:26      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 17:59:26      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 17:59:26      
+[INFO]    - {org.bank.service.BankMain}    3) Deposit         May-10-21 Monday PDT 18:01:57      
+[INFO]    - {org.bank.service.BankMain}    4) Withdraw         May-10-21 Monday PDT 18:01:57      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:01:57      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:01:57      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:01:57      
+[INFO]    - {org.bank.service.BankMain}    3) Deposit         May-10-21 Monday PDT 18:02:55      
+[INFO]    - {org.bank.service.BankMain}    4) Withdraw         May-10-21 Monday PDT 18:02:55      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:02:55      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:02:55      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:02:55      
+[INFO]    - {org.bank.service.BankMain}    3) Deposit         May-10-21 Monday PDT 18:11:36      
+[INFO]    - {org.bank.service.BankMain}    4) Withdraw         May-10-21 Monday PDT 18:11:36      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:11:36      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:11:36      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:11:36      
+[INFO]    - {org.bank.service.BankMain}    3) Deposit         May-10-21 Monday PDT 18:12:05      
+[INFO]    - {org.bank.service.BankMain}    4) Withdraw         May-10-21 Monday PDT 18:12:05      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:12:05      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:12:05      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:12:05      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:20:09      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:20:09      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:20:09      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:21:04      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:21:04      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:21:04      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:21:42      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:21:42      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:21:42      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:22:31      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:22:31      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:22:31      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:30:25      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:30:25      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:30:25      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:31:10      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:31:10      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:31:10      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:32:11      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:32:11      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:32:11      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:38:12      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:38:12      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:38:12      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:39:44      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:39:44      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:39:44      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:41:08      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:41:08      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:41:08      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:46:16      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:46:16      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:46:16      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:48:04      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:48:04      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:48:04      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 18:59:17      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 18:59:17      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 18:59:17      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:00:00      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:00:00      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:00:00      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:01:13      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:01:13      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:01:13      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:02:22      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:02:22      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:02:22      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:03:20      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:03:20      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:03:20      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:07:58      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:07:58      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:07:58      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:11:35      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:11:35      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:11:35      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:13:18      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:13:18      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:13:18      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:14:03      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:14:03      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:14:03      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:37:38      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:37:38      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:37:38      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:44:45      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:44:45      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:44:45      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:45:24      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:45:24      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:45:24      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:46:46      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:46:46      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:46:46      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:50:03      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:50:03      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:50:03      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 19:54:17      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 19:54:17      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 19:54:17      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:12:55      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:12:55      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:12:55      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:16:38      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:16:38      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:16:38      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:22:55      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:22:55      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:22:55      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-10-21 Monday PDT 20:23:37      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-10-21 Monday PDT 20:23:37      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-10-21 Monday PDT 20:25:48      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-10-21 Monday PDT 20:25:48      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:26:02      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:26:02      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:26:02      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 25         May-10-21 Monday PDT 20:26:11      
+[INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Account ID: 24         May-10-21 Monday PDT 20:26:11      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:27:24      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:27:24      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:27:24      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:32:55      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:32:55      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:32:55      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:33:51      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:33:51      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:33:51      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:35:32      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:35:32      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:35:32      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:36:02      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:36:02      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:36:02      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:37:23      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:37:23      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:37:23      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 20:38:58      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 20:38:58      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 20:38:58      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 21:13:50      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 21:13:50      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 21:13:50      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 21:14:37      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 21:14:37      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 21:14:37      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 21:19:29      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 21:19:29      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 21:19:29      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 21:40:50      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 21:40:50      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 21:40:50      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 21:42:52      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 21:42:52      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 21:42:52      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 21:44:10      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 21:44:10      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 21:44:10      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 21:44:54      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 21:44:54      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 21:44:54      
+[INFO]    - {org.bank.service.BankMain}    5) Make a transfer         May-10-21 Monday PDT 21:46:27      
+[INFO]    - {org.bank.service.BankMain}    6) Accept pending transfer         May-10-21 Monday PDT 21:46:27      
+[INFO]    - {org.bank.service.BankMain}    7) Logout         May-10-21 Monday PDT 21:46:27      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:05:17      
+[INFO]    - {org.bank.service.BankMain}             May-11-21 Tuesday PDT 19:05:17      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:10:55      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:12:00      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:12:45      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:13:05      
+[INFO]    - {org.bank.service.BankMain}    phuch         May-11-21 Tuesday PDT 19:13:05      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:13:53      
+[INFO]    - {org.bank.service.BankMain}    phuchdsf         May-11-21 Tuesday PDT 19:13:53      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:27:35      
+[INFO]    - {org.bank.service.BankMain}    asd         May-11-21 Tuesday PDT 19:27:35      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:27:36      
+[INFO]    - {org.bank.service.BankMain}    asd         May-11-21 Tuesday PDT 19:27:36      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:27:37      
+[INFO]    - {org.bank.service.BankMain}    asd         May-11-21 Tuesday PDT 19:27:37      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:27:37      
+[INFO]    - {org.bank.service.BankMain}    asd         May-11-21 Tuesday PDT 19:27:37      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:35:32      
+[INFO]    - {org.bank.service.BankMain}    asdas         May-11-21 Tuesday PDT 19:35:32      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:35:33      
+[INFO]    - {org.bank.service.BankMain}    asdas         May-11-21 Tuesday PDT 19:35:33      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:35:49      
+[INFO]    - {org.bank.service.BankMain}    phuch         May-11-21 Tuesday PDT 19:35:49      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:36:06      
+[INFO]    - {org.bank.service.BankMain}    phuch         May-11-21 Tuesday PDT 19:36:06      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 19:43:27      
+[INFO]    - {org.bank.service.BankMain}    phuch         May-11-21 Tuesday PDT 19:43:27      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 21:20:19      
+[INFO]    - {org.bank.service.BankMain}    phuch         May-11-21 Tuesday PDT 21:20:19      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 21:20:45      
+[INFO]    - {org.bank.service.BankMain}    phuch         May-11-21 Tuesday PDT 21:20:45      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:14:05      
+[INFO]    - {org.bank.service.BankMain}    phuch         May-11-21 Tuesday PDT 22:14:05      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:14:51      
+[INFO]    - {org.bank.service.BankMain}    phuch         May-11-21 Tuesday PDT 22:14:51      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:14:58      
+[INFO]    - {org.bank.service.BankMain}    phuch         May-11-21 Tuesday PDT 22:14:58      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:15:08      
+[INFO]    - {org.bank.service.BankMain}    asdas         May-11-21 Tuesday PDT 22:15:08      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:16:08      
+[INFO]    - {org.bank.service.BankMain}    phuch         May-11-21 Tuesday PDT 22:16:08      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:17:55      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:18:55      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:22:32      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:23:55      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:31:50      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:32:15      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:32:35      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:37:19      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:37:39      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:39:32      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 22:39:37      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 23:19:43      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 23:36:08      
+[INFO]    - {org.bank.service.BankMain}    hello         May-11-21 Tuesday PDT 23:56:25      
+[INFO]    - {org.bank.service.BankMain}    hello         May-12-21 Wednesday PDT 00:01:38      
+[INFO]    - {org.bank.service.BankMain}    hello         May-12-21 Wednesday PDT 00:05:25      

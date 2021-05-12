@@ -1,0 +1,17 @@
+
+b
+java:S1192F"GDefine a constant instead of duplicating this literal "amount" 4 times.(øÛˆşÿÿÿÿ
+b
+java:S1192E"LDefine a constant instead of duplicating this literal "accountType" 4 times.(Ä‡—Ü
+_
+java:S11925"IDefine a constant instead of duplicating this literal "username" 7 times.(á·¯š
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(«»÷î
+
+java:S1130"xRemove the declaration of thrown exception 'org.bank.exeption.BankException', as it cannot be thrown from method's body.(«»÷î
+B
+java:S1612",Replace this lambda with a method reference.(şà´²
+V	java:S1254"<This block of commented-out lines of code should be removed.(ŠöÙ·úÿÿÿÿ
+V	java:S1257"<This block of commented-out lines of code should be removed.(ÄŞû˜ûÿÿÿÿ
+W	java:S125Ó"<This block of commented-out lines of code should be removed.(ñ°Ù«ùÿÿÿÿ
+R	java:S125Ù"<This block of commented-out lines of code should be removed.(Èœª„

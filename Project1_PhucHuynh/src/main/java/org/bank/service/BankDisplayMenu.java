@@ -4,12 +4,11 @@ import org.apache.log4j.Logger;
 import org.bank.exeption.BankException;
 import org.bank.model.BankAccount;
 import org.bank.model.Customer;
+import org.bank.model.Transaction;
 import org.bank.service.implementation.CustomerServiceImplementation;
 import org.bank.service.implementation.EmployeeFunctionImplementation;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * BankDisplayMenu is created to provide the UI for the users, customers,and employees to interact with and x the console when entering x
@@ -333,7 +332,12 @@ public class BankDisplayMenu {
                 break;
             case "6":
                 try {
-                    customerService.displayPendingTransaction(loginUsername);
+                    List<Transaction> list = new ArrayList<>();
+                    list = customerService.displayPendingTransaction(loginUsername);
+                    for (Transaction t: list) {
+
+                        logger.info(t.getTransactionId() +" "+ t.getPendingTransaction());
+                    }
                     logger.info("Enter transaction id that you what to accept:");
                     int option = scanner.nextInt();
                     boolean status1 = false;
@@ -395,7 +399,7 @@ public class BankDisplayMenu {
                     logger.info("Please enter customer id");
                     int customerId = scanner.nextInt();
                     boolean state = false;
-                    state = employeeFunction.approveCustomerAccountById(customerId);
+                    state = employeeFunction.approveCustomerAccountById(customerId, "phuch");
                     if (state == true) {
                         logger.info("The account with id: " + customerId + "  is approved");
                     } else {
@@ -418,7 +422,9 @@ public class BankDisplayMenu {
                 case "5":
                     logger.info("Enter customer ID");
                     int customerId1 = scanner.nextInt();
-                    employeeFunction.displayPreviousTransactionById(customerId1);
+                    List<Transaction>  list2 = new ArrayList<>();
+                    list2 = employeeFunction.displayPreviousTransactionById(customerId1);
+                    System.out.println(list2 + "\n");
                     displayEmployeeMenu();
                     break;
                 default:

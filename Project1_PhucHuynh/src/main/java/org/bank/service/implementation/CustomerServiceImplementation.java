@@ -5,6 +5,7 @@ import org.bank.daos.CustomerDAO;
 import org.bank.daos.implementation.CustomerDAOImpl;
 import org.bank.exeption.BankException;
 import org.bank.model.BankAccount;
+import org.bank.model.Transaction;
 import org.bank.service.CustomerService;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,13 +51,15 @@ public class CustomerServiceImplementation implements CustomerService {
     }
 
     @Override
-    public void displayPendingTransaction(String username) throws BankException {
+    public List<Transaction> displayPendingTransaction(String username) throws BankException {
+        List<Transaction> list = new ArrayList<>();
         if (username.isEmpty()) {
             throw new BankException("No username is found");
         } else {
-            bankAccountDAO.displayPendingTransaction(username);
+         list =  bankAccountDAO.displayPendingTransaction(username);
 
         }
+        return list;
     }
 
     @Override
@@ -64,6 +67,13 @@ public class CustomerServiceImplementation implements CustomerService {
         boolean status;
         status = bankAccountDAO.acceptPendingTransfer(pendingTransactionId);
         return status;
+    }
+
+    @Override
+    public List<Transaction> displayPreviousTransactionByUsername(String username) throws BankException {
+        List<Transaction> list = new ArrayList<>();
+        list = bankAccountDAO.displayPreviousTransactionByUsername(username);
+        return list;
     }
     //the end
 }

@@ -12,7 +12,9 @@ public interface CustomerDAO {
 
     public List<Customer> displayAllPendingCustomer() throws BankException;
 
-    public boolean approveCustomerAccountById(int id);
+    public boolean approveCustomerAccountById(int id, String username);
 
     public boolean rejectCustomerAccountById(int id);
+
+    public Customer getCustomerApprover(int id);
 }

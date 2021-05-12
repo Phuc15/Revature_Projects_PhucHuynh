@@ -1,7 +1,15 @@
 
+I
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
 M
-java:S1128"7Remove this unused import 'org.bank.model.Transaction'.(å÷”ã
-M
-java:S1854"8Remove this useless assignment to local variable "list".(Š¥ËV
+java:S1854$"8Remove this useless assignment to local variable "list".(Š¥ËV
 S
-java:S1854*"8Remove this useless assignment to local variable "list".(¿±Üœÿÿÿÿÿ
+java:S1854/"8Remove this useless assignment to local variable "list".(¿±Üœÿÿÿÿÿ
+S
+java:S1854L"8Remove this useless assignment to local variable "list".(ºßÓşÿÿÿÿ
+S
+java:S1854S"8Remove this useless assignment to local variable "list".(ºßÓşÿÿÿÿ
+S
+java:S1854Z"8Remove this useless assignment to local variable "list".(ºßÓşÿÿÿÿ
+S
+java:S1854a"8Remove this useless assignment to local variable "list".(ºßÓşÿÿÿÿ

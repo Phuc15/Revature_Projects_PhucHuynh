@@ -1,0 +1,26 @@
+
+j
+java:S2095E"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+k
+java:S2095¯"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+k
+java:S2095ˆ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+k
+java:S2095œ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+j
+java:S2095e"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+j
+java:S2095*"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÌÖ¢žøÿÿÿÿ
+d
+java:S1192 "IDefine a constant instead of duplicating this literal "username" 3 times.(“£ž÷ÿÿÿÿÿ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(È®¥þúÿÿÿÿ
+N	java:S1065"9Replace this use of System.out or System.err by a logger.(›Òëæ
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿ
+<
+java:S14812"&Remove this unused "c" local variable.(ñ¿£ó
+=
+java:S1481‹"&Remove this unused "c" local variable.(á‡áÿ
+=
+java:S1481ž"&Remove this unused "c" local variable.(á‡áÿ

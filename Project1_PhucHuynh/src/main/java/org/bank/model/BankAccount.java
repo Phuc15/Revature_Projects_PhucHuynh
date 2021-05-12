@@ -18,7 +18,10 @@ public class BankAccount {
         this.balance = balance;
         this.accountId = accountId;
     }
-
+    public BankAccount(String accountType, double balance) {
+        this.accountType = accountType;
+        this.balance = balance;
+    }
 
     public BankAccount() {
     }

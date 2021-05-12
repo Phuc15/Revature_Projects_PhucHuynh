@@ -1,0 +1,61 @@
+
+`
+java:S1192Œ"IDefine a constant instead of duplicating this literal "Checking" 4 times.(Â¤î
+u
+java:S1192›"YDefine a constant instead of duplicating this literal "You successfully opened " 4 times.(Óƒ­Îøÿÿÿÿ
+x
+java:S1192ê"aDefine a constant instead of duplicating this literal "invalid amount. Please try again" 3 times.(º§É
+c
+java:S1192"GDefine a constant instead of duplicating this literal "Saving" 4 times.(Ãø¿ÿÿÿÿÿ
+n
+java:S1192ä"RDefine a constant instead of duplicating this literal "Enter an amount: " 6 times.(¤ê°ÿıÿÿÿÿ
+n
+java:S1192"SDefine a constant instead of duplicating this literal "Select an option: " 3 times.(×†Üèıÿÿÿÿ
+|
+java:S1192ö"`Define a constant instead of duplicating this literal "Invalid input. Please re-select" 3 times.(ÊŸŒÅûÿÿÿÿ
+}
+java:S1192ó"aDefine a constant instead of duplicating this literal "Invalid amount. Please try again" 3 times.(’¼ã¤ÿÿÿÿÿ
+u
+java:S1192ß"YDefine a constant instead of duplicating this literal "Please select an option:" 3 times.(¬ó•üÿÿÿÿÿ
+o
+java:S1192›"SDefine a constant instead of duplicating this literal " with the amount $" 3 times.(Óƒ­Îøÿÿÿÿ
+e
+java:S1192è"IDefine a constant instead of duplicating this literal " account" 6 times.(›¾–œıÿÿÿÿ
+P
+java:S1141O"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Ş·˜Øÿÿÿÿÿ
+=
+java:S11254"'Remove the unnecessary boolean literal.(öÃ‹Ù
+Q
+java:S1854œ":Remove this useless assignment to local variable "status".(ÿÓµ„
+T
+java:S1854¤"=Remove this useless assignment to local variable "amountsav".(ŸïŞã
+Q
+java:S1854¨":Remove this useless assignment to local variable "status".(ÿÓµ„
+\
+java:S1854º"@Remove this useless assignment to local variable "savingAmount".(ºŞ±¿ûÿÿÿÿ
+Q
+java:S1854¿":Remove this useless assignment to local variable "status".(ÿÓµ„
+Q
+java:S1854Â":Remove this useless assignment to local variable "status".(Ë®ÌØ
+N
+java:S1854Ğ"8Remove this useless assignment to local variable "list".(Š¥ËV
+T
+java:S1854Ï"8Remove this useless assignment to local variable "list".(ºßÓşÿÿÿÿ
+h
+java:S3776|"RRefactor this method to reduce its Cognitive Complexity from 87 to the 15 allowed.(¾ØŠÕ
+C
+java:S1125Ù"'Remove the unnecessary boolean literal.(ë„Ñòÿÿÿÿÿ
+N
+java:S1854ÿ"8Remove this useless assignment to local variable "list".(Š¥ËV
+U
+java:S1854ˆ"9Remove this useless assignment to local variable "list1".(Òúµ¨şÿÿÿÿ
+P
+java:S1854©"9Remove this useless assignment to local variable "list2".(è¢…
+b	java:S128‡"LEnd this switch case with an unconditional break, return or throw statement.(ç¿Ô
+>
+java:S1125“"'Remove the unnecessary boolean literal.(—¾˜÷
+C
+java:S1125Ÿ"'Remove the unnecessary boolean literal.(ê‰íªûÿÿÿÿ
+[	java:S106«"9Replace this use of System.out or System.err by a logger.(ÜÏé„úÿÿÿÿ8¢ğì•/
