@@ -1,0 +1,15 @@
+
+e
+java:S1192E"HDefine a constant instead of duplicating this literal "balance" 4 times.(¦æÛ´8Õ†àÏ–/
+m
+java:S1192H"KDefine a constant instead of duplicating this literal "successful" 4 times.(²Ãû–ùÿÿÿÿ8Ö†àÏ–/
+i
+java:S1192D"LDefine a constant instead of duplicating this literal "accountType" 4 times.(Ä‡—Ü8Ö†àÏ–/
+f
+java:S11924"IDefine a constant instead of duplicating this literal "username" 9 times.(á·¯š8Ö†àÏ–/
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(šª´É8Ü†àÏ–/
+I
+java:S1612",Replace this lambda with a method reference.(şà´²8ïŸâÏ–/
+]	java:S1253"<This block of commented-out lines of code should be removed.(ŠöÙ·úÿÿÿÿ8İ†àÏ–/
+]	java:S1256"<This block of commented-out lines of code should be removed.(ÄŞû˜ûÿÿÿÿ8Ş†àÏ–/

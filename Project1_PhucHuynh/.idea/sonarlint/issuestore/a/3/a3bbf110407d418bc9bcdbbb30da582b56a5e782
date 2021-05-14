@@ -1,0 +1,38 @@
+
+k
+java:S2095Ò"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+j
+java:S2095+"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÌÖ¢žøÿÿÿÿ
+k
+java:S2095•"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+k
+java:S2095É"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÌÖ¢žøÿÿÿÿ
+j
+java:S2095f"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+k
+java:S2095µ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+k
+java:S2095ª"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÌÖ¢žøÿÿÿÿ
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+j
+java:S2095F"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+k
+java:S2095Š"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÌÖ¢žøÿÿÿÿ
+ 
+java:S1192ˆ"ˆDefine a constant instead of duplicating this literal "SELECT username, password, customer_name, contact, customer_id, status
+" 3 times.(ˆ÷âž
+g
+java:S1192l"LDefine a constant instead of duplicating this literal "customer_id" 4 times.(úÑúêùÿÿÿÿ
+^
+java:S1192g"HDefine a constant instead of duplicating this literal "Pending" 4 times.(Ý¦ÿ‰
+d
+java:S1192!"IDefine a constant instead of duplicating this literal "username" 3 times.(“£ž÷ÿÿÿÿÿ
+N	java:S1066"9Replace this use of System.out or System.err by a logger.(›Òëæ
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿ
+<
+java:S14813"&Remove this unused "c" local variable.(ñ¿£ó
+=
+java:S1481˜"&Remove this unused "c" local variable.(á‡áÿ
+=
+java:S1481·"&Remove this unused "c" local variable.(á‡áÿ
