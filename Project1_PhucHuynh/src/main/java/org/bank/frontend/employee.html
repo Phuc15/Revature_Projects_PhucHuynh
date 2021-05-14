@@ -27,7 +27,6 @@
       role="tablist"
       style="background-color: dimgrey"
     >
-     
       <li class="nav-item">
         <a
           class="nav-link"
@@ -54,7 +53,6 @@
       </li>
     </ul>
     <div class="tab-content card pt-5" id="myTabContentJust">
-
       <!--Functions tab-->
       <div
         class="tab-pane fade"
@@ -63,16 +61,18 @@
         aria-labelledby="functions-tab-just"
       >
         <!--Display Customer INFO by customerID-->
-        <form class="container" class = "mask">
-          <h4 class="font-weight-normal">--Display Customer Banking Information by Customer ID--</h4>
+        <form class="container" class="mask">
+          <h4 class="font-weight-normal">
+            --Display Customer Banking Information by Customer ID--
+          </h4>
           <div class="form-group">
-            <div id="banktable">
-            </div>
+            <div id="banktable"></div>
             <label for="inputsm">Customer ID</label>
             <input class="form-control input-sm" id="id-c" type="text" />
             <span style="color: red" id="err3"></span><br />
             <button id="btn3" class="btn btn-success" type="button">
-              Display</button><br/>
+              Display</button
+            ><br />
           </div>
         </form>
         <!--Display Customer INFO Account ID-->
@@ -81,17 +81,22 @@
         <br />
         <!--Display all previous transaction by customer id-->
         <form class="container">
-          <h4 class="font-weight-normal">--Display All Previous Transactions By Customer ID--</h4>
-        
-          <div class="form-group">
-            <div id="banktable-t">
+          <h4 class="font-weight-normal">
+            --Display All Previous Transactions By Customer ID--
+          </h4>
 
-            </div>
+          <div class="form-group">
+            <div id="banktable-t"></div>
             <label for="inputsm">Customer ID</label>
-            <input class="form-control input-sm" id="customerid-p" type="text" />
-            <span style="color: red" id="err4"></span><br>
+            <input
+              class="form-control input-sm"
+              id="customerid-p"
+              type="text"
+            />
+            <span style="color: red" id="err4"></span><br />
             <button id="btn4" class="btn btn-success" type="button">
-              Display</button><br />
+              Display</button
+            ><br />
           </div>
         </form>
         <!--Display all previous transaction by customer id-->
@@ -100,119 +105,141 @@
         <br />
         <!--Display all previous transaction by account id-->
         <form class="container">
-            <h4 class="font-weight-normal">--Display All Previous Transactions By Account ID--</h4>
-          
-            <div class="form-group">
-              <div id="banktable-t-accountid">
-  
-              </div>
-              <label for="inputsm">Account ID</label>
-              <input class="form-control input-sm" id="accountid-p" type="text" />
-              <span style="color: red" id="err5"></span><br>
-              <button id="btn5" class="btn btn-success" type="button">
-                Display</button><br />
-            </div>
-          </form>
-          <!--Display all previous transaction by account id-->
+          <h4 class="font-weight-normal">
+            --Display All Previous Transactions By Account ID--
+          </h4>
+
+          <div class="form-group">
+            <div id="banktable-t-accountid"></div>
+            <label for="inputsm">Account ID</label>
+            <input class="form-control input-sm" id="accountid-p" type="text" />
+            <span style="color: red" id="err5"></span><br />
+            <button id="btn5" class="btn btn-success" type="button">
+              Display</button
+            ><br />
+          </div>
+        </form>
+        <!--Display all previous transaction by account id-->
         <br />
         <br />
         <br />
-          <!--Display all previous transaction by transaction id-->
-          <form class="container">
-            <h4 class="font-weight-normal">--Display All Previous Transactions Transaction ID--</h4>
-          
-            <div class="form-group">
-              <div id="banktable-t-transactionid">
-              </div>
-              <label for="inputsm">Transaction ID</label>
-              <input class="form-control input-sm" id="transactionid-p" type="text" />
-              <span style="color: red" id="err6"></span><br>
-              <button id="btn6" class="btn btn-success" type="button">
-                Display</button><br />
-            </div>
-          </form>
-          <!--Display all previous transaction by transaction id-->
+        <!--Display all previous transaction by transaction id-->
+        <form class="container">
+          <h4 class="font-weight-normal">
+            --Display All Previous Transactions Transaction ID--
+          </h4>
+
+          <div class="form-group">
+            <div id="banktable-t-transactionid"></div>
+            <label for="inputsm">Transaction ID</label>
+            <input
+              class="form-control input-sm"
+              id="transactionid-p"
+              type="text"
+            />
+            <span style="color: red" id="err6"></span><br />
+            <button id="btn6" class="btn btn-success" type="button">
+              Display</button
+            ><br />
+          </div>
+        </form>
+        <!--Display all previous transaction by transaction id-->
         <br />
         <br />
         <br />
         <!--Display all previous transaction by date-->
         <form class="container">
-            <h4 class="font-weight-normal">--Display All Previous Transactions Date (YYYY-MM-DD)--</h4>
-          
-            <div class="form-group">
-              <div id="banktable-t-date">
-              </div>
-              <label for="inputsm">Date</label>
-              <input class="form-control input-sm" id="date-p" type="text" placeholder="YYYY-MM-DD" />
-              <span style="color: red" id="err7"></span><br>
-              <button id="btn7" class="btn btn-success" type="button">
-                Display</button><br/>
-            </div>
-          </form>
-          <!--Display all previous transaction by date-->
-         <br>
-         <br>
-         <br>
-       <!--Display all pending customer-->
-       <form class="container">
-        <h4 class="font-weight-normal">--Display All Pending Customers--</h4>
-        <div class="form-group">
-          <div id="banktable-pending-customers">
-          </div>
-          <span style="color: red" id="err8"></span><br>
-          <button id="btn8" class="btn btn-success" type="button">
-            Display</button><br/>
-        </div>
-      </form>
-      <!--Display all pending customers-->
-        <br>
-        <br>
-        <br>
+          <h4 class="font-weight-normal">
+            --Display All Previous Transactions Date (YYYY-MM-DD)--
+          </h4>
 
-         <!--Approve the account by customerID-->
-         <form class="container" class = "mask">
-            <h4 class="font-weight-normal">--Approve Customer Account by Customer ID--</h4>
-            <div class="form-group">
-              <label for="inputsm">Customer ID</label>
-              <input class="form-control input-sm" id="id-ap" type="text" />
-              <span style="color: red" id="err11"></span><br />
-              <button id="btn11" class="btn btn-success" type="button">
-                Aprrove</button><br/>
-            </div>
-          </form>
-          <!--Approve the account by customerID-->
-          <br>
-          <br>
-          <br>
-         <!--Reject Customer by customer ID-->
-          <form class="container" class = "mask">
-            <h4 class="font-weight-normal">--Reject Customer Account by Customer ID--</h4>
-            <div class="form-group">
-              <label for="inputsm">Customer ID</label>
-              <input class="form-control input-sm" id="id-re" type="text" />
-              <span style="color: red" id="err12"></span><br />
-              <button id="btn12" class="btn btn-success" type="button">
-                Reject</button><br/>
-            </div>
-          </form>
-          <!--Reject Customer by customer ID-->
-          <br>
-          <br>
-          <br>
-           <!--Display Approver -->
-       <form class="container">
-        <h4 class="font-weight-normal">--Display a Approver of a Specific Customer By Customer ID--</h4>
-        <div class="form-group">
-          <div id="banktable-approver">
+          <div class="form-group">
+            <div id="banktable-t-date"></div>
+            <label for="inputsm">Date</label>
+            <input
+              class="form-control input-sm"
+              id="date-p"
+              type="text"
+              placeholder="YYYY-MM-DD"
+            />
+            <span style="color: red" id="err7"></span><br />
+            <button id="btn7" class="btn btn-success" type="button">
+              Display</button
+            ><br />
           </div>
-          <label for="inputsm">Customer ID</label>
-          <input class="form-control input-sm" id="id-apr" type="text" />
-          <span style="color: red" id="err13"></span><br>
-          <button id="btn13" class="btn btn-success" type="button">
-            Display</button><br/>
-        </div>
-      </form>
-      <!--Display Approver-->
+        </form>
+        <!--Display all previous transaction by date-->
+        <br />
+        <br />
+        <br />
+        <!--Display all pending customer-->
+        <form class="container">
+          <h4 class="font-weight-normal">--Display All Pending Customers--</h4>
+          <div class="form-group">
+            <div id="banktable-pending-customers"></div>
+            <span style="color: red" id="err8"></span><br />
+            <button id="btn8" class="btn btn-success" type="button">
+              Display</button
+            ><br />
+          </div>
+        </form>
+        <!--Display all pending customers-->
+        <br />
+        <br />
+        <br />
+
+        <!--Approve the account by customerID-->
+        <form class="container" class="mask">
+          <h4 class="font-weight-normal">
+            --Approve Customer Account by Customer ID--
+          </h4>
+          <div class="form-group">
+            <label for="inputsm">Customer ID</label>
+            <input class="form-control input-sm" id="id-ap" type="text" />
+            <span style="color: red" id="err11"></span><br />
+            <button id="btn11" class="btn btn-success" type="button">
+              Approve</button
+            ><br />
+          </div>
+        </form>
+        <!--Approve the account by customerID-->
+        <br />
+        <br />
+        <br />
+        <!--Reject Customer by customer ID-->
+        <form class="container" class="mask">
+          <h4 class="font-weight-normal">
+            --Reject Customer Account by Customer ID--
+          </h4>
+          <div class="form-group">
+            <label for="inputsm">Customer ID</label>
+            <input class="form-control input-sm" id="id-re" type="text" />
+            <span style="color: red" id="err12"></span><br />
+            <button id="btn12" class="btn btn-success" type="button">
+              Reject</button
+            ><br />
+          </div>
+        </form>
+        <!--Reject Customer by customer ID-->
+        <br />
+        <br />
+        <br />
+        <!--Display Approver -->
+        <form class="container">
+          <h4 class="font-weight-normal">
+            --Display a Approver of a Specific Customer By Customer ID--
+          </h4>
+          <div class="form-group">
+            <div id="banktable-approver"></div>
+            <label for="inputsm">Customer ID</label>
+            <input class="form-control input-sm" id="id-apr" type="text" />
+            <span style="color: red" id="err13"></span><br />
+            <button id="btn13" class="btn btn-success" type="button">
+              Display</button
+            ><br />
+          </div>
+        </form>
+        <!--Display Approver-->
       </div>
       <!--Apply tab-->
       <div
@@ -223,15 +250,32 @@
       >
         <form class="container">
           <h4 class="font-weight-normal">Register a New Employee Login</h4>
-          <p class="font-weight-normal">Note: Only cetain groups of people have a permission to access this function</p>
+          <p class="font-weight-normal">
+            Note: Only cetain groups of people have a permission to access this
+            function
+          </p>
           <div class="form-group">
-          <label for="inputsm">Username</label>
-          <input class="form-control input-sm" id="username" type="text" placeholder="phuch">
-          <label for="inputsm">Password</label>
-          <input class="form-control input-sm" id="password" type="text"placeholder ="*****">
-          <label for="inputsm">Name</label>
-          <input class="form-control input-sm" id="employee-name" type="text" >
-          <span style="color: red;" id="err10"></span> <br>
+            <label for="inputsm">Username</label>
+            <input
+              class="form-control input-sm"
+              id="username"
+              type="text"
+              placeholder="phuch"
+            />
+            <label for="inputsm">Password</label>
+            <input
+              class="form-control input-sm"
+              id="password"
+              type="text"
+              placeholder="*****"
+            />
+            <label for="inputsm">Name</label>
+            <input
+              class="form-control input-sm"
+              id="employee-name"
+              type="text"
+            />
+            <span style="color: red" id="err10"></span> <br />
             <button id="btn10" class="btn btn-success" type="button">
               Register</button
             ><br />
@@ -240,7 +284,7 @@
       </div>
     </div>
     <div class="text-center">
-      <button id = "btn9"type="button" class="btn btn-info">Logout</button>
+      <button id="btn9" type="button" class="btn btn-info">Logout</button>
     </div>
 
     <!-- JavaScript Bundle with Popper -->

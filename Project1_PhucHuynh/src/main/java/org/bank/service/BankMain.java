@@ -12,6 +12,7 @@ import org.bank.service.implementation.EmployeeFunctionImplementation;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.json.JSONObject;
 
 /**
@@ -19,13 +20,12 @@ import org.json.JSONObject;
  */
 public class BankMain {
     private static Logger logger = Logger.getLogger(BankMain.class);
+
     public static void main(String[] args) throws BankException {
         EmployeeFunction employeeFunction = new EmployeeFunctionImplementation();
         CustomerService customerService = new CustomerServiceImplementation();
-        Javalin app = Javalin.create(config->config.enableCorsForAllOrigins()).
+        Javalin app = Javalin.create(config -> config.enableCorsForAllOrigins()).
                 start(8000);
-
-
 
 
         /**
@@ -38,7 +38,7 @@ public class BankMain {
                 Customer customer = ctx.bodyAsClass(Customer.class);
                 employeeFunction.registerForNewAccount(customer);
                 ctx.json("Thank you for choosing Billy Banking. Your account is now pending to be approved");
-            }catch (BankException e) {
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -53,9 +53,9 @@ public class BankMain {
                 String username = ctx.pathParam("username");
                 String password = ctx.pathParam("password");
                 //logger.info(username);
-                validation = customerService.validateAccount(username,password);
+                validation = customerService.validateAccount(username, password);
                 ctx.json(validation);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -66,14 +66,13 @@ public class BankMain {
                 ctx.body();
                 JSONObject jsonObject = new JSONObject(ctx.body());
                 String username = jsonObject.getString("username");
-
                 String accountType = jsonObject.getString("accountType");
                 double amount = Double.parseDouble(jsonObject.getString("balance"));
 
                 customerService.applyForBankAccount(username, accountType, amount);
                 ctx.json("successful");
 
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -85,12 +84,11 @@ public class BankMain {
 
                 List<BankAccount> list = customerService.viewBankAccount(username);
                 ctx.json(list);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
                 logger.error(e.getMessage());
             }
         });
-
 
 
         //deposit
@@ -104,10 +102,10 @@ public class BankMain {
 
                 customerService.deposit(username, accountType, amount);
                 ctx.json("successful");
-            }catch (BankException e) {
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
-            });
+        });
 
 
         //Withdraw
@@ -120,7 +118,7 @@ public class BankMain {
                 double amount = Double.parseDouble(jsonObject.getString("balance"));
                 customerService.withdraw(username, accountType, amount);
                 ctx.json("successful");
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -136,7 +134,7 @@ public class BankMain {
                 double amount = Double.parseDouble(jsonObject.getString("balance"));
                 customerService.makeTransfer(fromUsername, toUsername, accountType, amount);
                 ctx.json("successful");
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -148,7 +146,7 @@ public class BankMain {
 
                 List<Transaction> list = customerService.displayPendingTransaction(username);
                 ctx.json(list);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -157,20 +155,20 @@ public class BankMain {
         // Accept the pending transactions by the id
         app.get("/customer/bankaccount/accept-pending-transaction/:id", ctx -> {
             try {
-                int id  = Integer.parseInt(ctx.pathParam("id"));
+                int id = Integer.parseInt(ctx.pathParam("id"));
                 boolean status = customerService.acceptPendingTransfer(id);
                 ctx.json(status);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
         //Display all of previous transaction
         app.get("/customer/bankaccount/display/previous-transaction/:username", ctx -> {
             try {
-               String username = ctx.pathParam("username");
+                String username = ctx.pathParam("username");
                 List<Transaction> list = customerService.displayPreviousTransactionByUsername(username);
                 ctx.json(list);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -190,10 +188,10 @@ public class BankMain {
         //display bankinfo by the customer id
         app.get("/employee/customer/:id", ctx -> {
             try {
-                int id  = Integer.parseInt(ctx.pathParam("id"));
-               List<BankAccount> list = employeeFunction.displayCustomerBankAccountById(id);
-               ctx.json(list);
-            }catch (BankException e){
+                int id = Integer.parseInt(ctx.pathParam("id"));
+                List<BankAccount> list = employeeFunction.displayCustomerBankAccountById(id);
+                ctx.json(list);
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -203,7 +201,7 @@ public class BankMain {
             try {
                 List<Customer> list = employeeFunction.displayAllPendingCustomer();
                 ctx.json(list);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -215,7 +213,7 @@ public class BankMain {
                 String employeeUsername = ctx.pathParam("employeeUsername");
                 boolean status = employeeFunction.approveCustomerAccountById(id, employeeUsername);
                 ctx.json(status);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -224,10 +222,10 @@ public class BankMain {
 
         app.get("/employee/reject-customer-pending/:id", ctx -> {
             try {
-                int id  =  Integer.parseInt(ctx.pathParam("id"));
+                int id = Integer.parseInt(ctx.pathParam("id"));
                 boolean status = employeeFunction.rejectCustomerAccountById(id);
                 ctx.json(status);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -235,9 +233,9 @@ public class BankMain {
         app.get("/employee/bankaccount/transaction/:id", ctx -> {
             try {
                 int id = Integer.parseInt(ctx.pathParam("id"));
-               List<Transaction>  list = employeeFunction.displayPreviousTransactionById(id);
+                List<Transaction> list = employeeFunction.displayPreviousTransactionById(id);
                 ctx.json(list);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -248,7 +246,7 @@ public class BankMain {
                 int id = Integer.parseInt(ctx.pathParam("id"));
                 List<Transaction> list = employeeFunction.displayPreviousTransactionByAccountId(id);
                 ctx.json(list);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -259,7 +257,7 @@ public class BankMain {
                 int id = Integer.parseInt(ctx.pathParam("id"));
                 List<Transaction> list = employeeFunction.displayPreviousTransactionByTransactionId(id);
                 ctx.json(list);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -267,12 +265,10 @@ public class BankMain {
         app.get("/employee/bankaccount/transaction-by-date/:date", ctx -> {
             try {
                 String tempDate = ctx.pathParam("date");
-                String date = tempDate+"%";
-                System.out.println(date);
+                String date = tempDate + "%";
                 List<Transaction> list = employeeFunction.displayPreviousTransactionByDate(date);
-                System.out.println(list);
                 ctx.json(list);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -287,7 +283,7 @@ public class BankMain {
                 String password = ctx.pathParam("password");
                 validation = employeeFunction.validateEmployeeAccount(username, password);
                 ctx.json(validation);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e.getMessage());
             }
         });
@@ -298,67 +294,17 @@ public class BankMain {
                 int id = Integer.parseInt(ctx.pathParam("id"));
                 Customer customer = employeeFunction.getCustomerApprover(id);
                 ctx.json(customer);
-            }catch (BankException e){
+            } catch (BankException e) {
                 ctx.json(e);
             }
         });
 
 
+/**
+ * ========================================END=========================================================================
+ */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        BankDisplayMenu bankDriver = new BankDisplayMenu();
-//        logger.info("------------------------------------------------------");
-//        logger.info("Welcome to Billy Bank!!!! ");
-//        logger.info("-------------------------------------------------------");
-//        bankDriver.displayMenu();
-
-        //List<Transaction> list = new ArrayList<>();
-        //list = employeeFunction.displayPreviousTransactionByTransactionId(1);
-        //list = employeeFunction.displayPreviousTransactionByAccountId(26);
-        //list = employeeFunction.displayPreviousTransactionByDate("2021-05-07%");
-        //System.out.println(list);
-        //employeeFunction.registerForEmployeeAccount(new Employee("phuch", "phucsonmy", "Phuc"));
-        /*boolean a = employeeFunction.validateEmployeeAccount("phuc", "phucsonmy");
-        System.out.println(a);
-        boolean a = employeeFunction.approveCustomerAccountById(22, "Phuch");*/
 
     }
 

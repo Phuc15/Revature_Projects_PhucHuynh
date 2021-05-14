@@ -26,6 +26,14 @@ public class EmployeeFunctionImplementation implements EmployeeFunction {
     CustomerDAO customerDAO = new CustomerDAOImpl();
     EmployeeDAO employeeDAO = new EmployeeDAOImpl();
 
+    public EmployeeFunctionImplementation(BankAccountDAO bankAccountDAO, CustomerDAO customerDAO, EmployeeDAO employeeDAO) {
+        this.bankAccountDAO = bankAccountDAO;
+        this.customerDAO = customerDAO;
+        this.employeeDAO = employeeDAO;
+    }
+
+    public EmployeeFunctionImplementation() { }
+
     @Override
     public void registerForNewAccount(Customer customer) throws BankException {
         customerDAO.registerForNewAccount(customer);

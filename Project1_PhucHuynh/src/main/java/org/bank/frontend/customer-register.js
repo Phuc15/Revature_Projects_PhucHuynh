@@ -14,7 +14,7 @@ btn1.addEventListener("click", () => {
     document.getElementById("err").innerText =
       "Invalid input or missing values";
   } else {
-    document.getElementById("err").innerText =""; 
+    document.getElementById("err").innerText = "";
     let url = "http://localhost:8000/customer";
     fetch(url, {
       method: "POST",
@@ -22,21 +22,24 @@ btn1.addEventListener("click", () => {
         username: username,
         password: password,
         customerName: customername,
-        contact : contact,
-        status : status
+        contact: contact,
+        status: status,
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     })
       .then((response) => response.json())
-      .then(res => {
-      let data = JSON.stringify(res.data);
-      console.log(data);
-      if(res =="Thank you for choosing Billy Banking. Your account is now pending to be approved"){
-      location.replace("http://127.0.0.1:5500/customerlogin.html");
-      }
-       document.getElementById("err").innerText = res;
+      .then((res) => {
+        let data = JSON.stringify(res.data);
+        console.log(data);
+        if (
+          res ==
+          "Thank you for choosing Billy Banking. Your account is now pending to be approved"
+        ) {
+          location.replace("http://127.0.0.1:5500/customerlogin.html");
+        }
+        document.getElementById("err").innerText = res;
       });
   }
 });

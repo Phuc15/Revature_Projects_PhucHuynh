@@ -17,6 +17,16 @@ public class CustomerServiceImplementation implements CustomerService {
     BankAccountDAO bankAccountDAO = new BankAccountDAOImpl();
     CustomerDAO customerDAO = new CustomerDAOImpl();
 
+    public CustomerServiceImplementation() {
+        bankAccountDAO = new BankAccountDAOImpl();
+        customerDAO = new CustomerDAOImpl();
+    }
+
+    public CustomerServiceImplementation(BankAccountDAO bankAccountDAO, CustomerDAO customerDAO) {
+        this.bankAccountDAO = bankAccountDAO;
+        this.customerDAO = customerDAO;
+    }
+
     @Override
     public boolean validateAccount(String username, String password) throws BankException {
         boolean status = customerDAO.validateAccount(username, password);

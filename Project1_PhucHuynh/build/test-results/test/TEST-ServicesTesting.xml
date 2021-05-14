@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ServicesTesting" tests="23" skipped="0" failures="0" errors="0" timestamp="2021-05-14T08:09:05" hostname="DESKTOP-U50QLRV" time="0.658">
+  <properties/>
+  <testcase name="testGetCustomerApprover()" classname="ServicesTesting" time="0.625"/>
+  <testcase name="approveCustomerAccountById()" classname="ServicesTesting" time="0.002"/>
+  <testcase name="approveCustomerAccountByIdShouldFail()" classname="ServicesTesting" time="0.001"/>
+  <testcase name="testViewBankAccount()" classname="ServicesTesting" time="0.002"/>
+  <testcase name="testDisplayAllPendingCustomer()" classname="ServicesTesting" time="0.001"/>
+  <testcase name="testWithdraw()" classname="ServicesTesting" time="0.006"/>
+  <testcase name="testapplyForBankAccount()" classname="ServicesTesting" time="0.001"/>
+  <testcase name="testDisplayPreviousTransactionById()" classname="ServicesTesting" time="0.001"/>
+  <testcase name="testDisplayCustomerBankAccountById()" classname="ServicesTesting" time="0.0"/>
+  <testcase name="testRegisterForNewAccount()" classname="ServicesTesting" time="0.0"/>
+  <testcase name="testValidateEmployeeAccountShouldFail()" classname="ServicesTesting" time="0.0"/>
+  <testcase name="testDisplayPreviousTransactionByDate()" classname="ServicesTesting" time="0.001"/>
+  <testcase name="rejectCustomerAccountByIdShouldFail()" classname="ServicesTesting" time="0.0"/>
+  <testcase name="testRegisterForEmployeeAccount()" classname="ServicesTesting" time="0.0"/>
+  <testcase name="testValidateAccountshouldFail()" classname="ServicesTesting" time="0.001"/>
+  <testcase name="testValidateAccountshouldPass()" classname="ServicesTesting" time="0.001"/>
+  <testcase name="testDisplayPreviousTransactionByTransactionId()" classname="ServicesTesting" time="0.0"/>
+  <testcase name="testDeposit()" classname="ServicesTesting" time="0.0"/>
+  <testcase name="rejectCustomerAccountById()" classname="ServicesTesting" time="0.001"/>
+  <testcase name="testDisplayPendingTrasaction()" classname="ServicesTesting" time="0.0"/>
+  <testcase name="testValidateEmployeeAccount()" classname="ServicesTesting" time="0.0"/>
+  <testcase name="testAcceptPendingTransactionShouldFail()" classname="ServicesTesting" time="0.001"/>
+  <testcase name="testAcceptPendingTransactionShouldPass()" classname="ServicesTesting" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

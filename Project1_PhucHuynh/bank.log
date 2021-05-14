@@ -4693,3 +4693,5 @@
 [INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    Checking         May-13-21 Thursday PDT 16:44:31      
 [INFO]    - {org.bank.daos.implementation.BankAccountDAOImpl}    [Saving, Checking]         May-13-21 Thursday PDT 16:44:52      
 [INFO]    - {org.bank.service.BankMain}    hello         May-13-21 Thursday PDT 16:53:49      
+[INFO]    - {org.bank.service.BankMain}    hello         May-13-21 Thursday PDT 18:26:48      
+[INFO]    - {org.bank.service.BankMain}    hello         May-13-21 Thursday PDT 18:55:00      

@@ -23,6 +23,7 @@ public class CustomerDAOImpl implements CustomerDAO {
      */
     @Override
     public void registerForNewAccount(Customer customer) throws BankException {
+
         try (Connection connection = ConnectionManager.getConnection()) {
             String sql = "select c.username from mybank_schema.customer c where c.username = ?;\n";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
