@@ -34,7 +34,7 @@ public class CustomerDAOImpl implements CustomerDAO {
                 if (customer.getUsername().equals(username)) {
                     throw new BankException("Username already exist. Please try again");
                 } else {
-                    logger.info("Your information looks good!!!!");
+                    logger.trace("Your information looks good!!!!");
                 }
             }
             String sql1 = "INSERT INTO mybank_schema.customer\n" +
@@ -51,9 +51,9 @@ public class CustomerDAOImpl implements CustomerDAO {
             int c = preparedStatement1.executeUpdate();
 
         } catch (SQLException throwables) {
-            System.out.println(throwables);
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            System.out.println(e);
+            logger.error(e);
         }
     }
 
@@ -117,9 +117,9 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+           logger.error(e);
         }
 
         return list;
@@ -151,9 +151,9 @@ public class CustomerDAOImpl implements CustomerDAO {
             preparedStatement.setInt(2, id);
             int c = preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         return status;
     }
@@ -218,9 +218,9 @@ public class CustomerDAOImpl implements CustomerDAO {
             if(customer.getStatus().equals("Pending")) throw new BankException("Account is still pending to be approved");
 
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         return customer;
     }

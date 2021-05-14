@@ -23,9 +23,4 @@ public class BankAccountDAOTesting {
         Assertions.assertEquals(true, bankAccountDAO.acceptPendingTransfer(16));
     }*/
 
-
-
-
-
-
 }

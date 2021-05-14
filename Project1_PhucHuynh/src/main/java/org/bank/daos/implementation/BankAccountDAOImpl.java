@@ -54,9 +54,9 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             if (list.isEmpty()) throw new BankException("No account is found with this username");
 
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+           logger.error(e);
         }
 
         return list;
@@ -169,7 +169,6 @@ public class BankAccountDAOImpl implements BankAccountDAO {
                 bankAccount.setBalance(resultSet1.getDouble("balance"));
                 list.add(bankAccount.getAccountType());
             }
-            logger.info(list);
 
             if (bankAccount.getBalance() < amount) {
                 throw new BankException("Insufficient fund!");
@@ -211,9 +210,9 @@ public class BankAccountDAOImpl implements BankAccountDAO {
                 }
             }
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+           logger.error(e);
         }
 
     }
@@ -316,9 +315,9 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             int c2 = preparedStatement6.executeUpdate();
 
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+           logger.error(e);
         }
 
     }
@@ -373,9 +372,9 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             }
             if(list.isEmpty()) throw new BankException("There is no pending transaction");
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+           logger.error(e);
         }
        return list;
     }
@@ -466,9 +465,9 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             list = displayPreviousTransactionById(customer.getCustomerId());
             if(list.isEmpty()) throw new BankException("There is no transactions in the record");
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         return list;
     }
@@ -497,9 +496,9 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             if (list.isEmpty()) {throw new BankException("No bank account with customer id");}
 
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         return list;
     }
@@ -624,9 +623,9 @@ public class BankAccountDAOImpl implements BankAccountDAO {
             if(list.isEmpty()) throw new BankException("Transactions not found with this date");
 
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         return list;
     }

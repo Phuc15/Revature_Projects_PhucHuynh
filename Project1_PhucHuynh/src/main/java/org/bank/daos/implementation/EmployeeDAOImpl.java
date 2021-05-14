@@ -1,5 +1,6 @@
 package org.bank.daos.implementation;
 
+import org.apache.log4j.Logger;
 import org.bank.daos.EmployeeDAO;
 import org.bank.exeption.BankException;
 import org.bank.model.Employee;
@@ -11,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
+    private static Logger logger = Logger.getLogger(EmployeeDAOImpl.class);
     @Override
     public void registerForEmployeeAccount(Employee employee) throws BankException {
         try (Connection connection = ConnectionManager.getConnection()) {
@@ -38,9 +40,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
             int c = preparedStatement1.executeUpdate();
 
         } catch (SQLException throwables) {
-            System.out.println(throwables);
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            System.out.println(e);
+            logger.error(e);
         }
     }
 
@@ -66,9 +68,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
             }
 
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            logger.error(throwables);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.error(e);
         }
         return status;
 
