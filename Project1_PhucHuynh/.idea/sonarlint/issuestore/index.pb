@@ -1,10 +1,6 @@
 
 s
 Csrc/main/java/org/bank/postgressqlconnection/ConnectionManager.java,a\c\aca79ebd0ce1dbffdb96fe34efa30c00bacc624f
-8
-bank.log,8\b\8bc4ab7a7487ae77b43bdae966f848440e9197a1
-U
-%src/test/java/CustomerDAOTesting.java,1\0\1076bdefa3c5024ce64a9f2be126101aa6e35d89
 \
 ,src/main/java/org/bank/daos/EmployeeDAO.java,2\8\28760c4c9caca0341b9dbafd04e61ce92063a194
 6

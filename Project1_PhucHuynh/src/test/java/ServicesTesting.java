@@ -16,6 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 import static org.mockito.Mockito.*;
 
+/**
+ * Using Mockito to create dumb object to test bank service functionalities
+ */
+
 public class ServicesTesting {
 
    @Test
@@ -274,15 +278,5 @@ public class ServicesTesting {
         EmployeeFunction employeeFunction = new EmployeeFunctionImplementation(bankAccountDAO, customerDAO, employeeDAO);
         Assertions.assertEquals(false, employeeFunction.validateEmployeeAccount("phuc","phucsonmy"));
     }
-
-
-
-
-
-
-
-
-
-
 
 }

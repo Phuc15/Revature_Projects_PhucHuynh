@@ -22,17 +22,18 @@ public class BankMain {
     private static Logger logger = Logger.getLogger(BankMain.class);
 
     public static void main(String[] args) throws BankException {
-        EmployeeFunction employeeFunction = new EmployeeFunctionImplementation();
+       /* EmployeeFunction employeeFunction = new EmployeeFunctionImplementation();
         CustomerService customerService = new CustomerServiceImplementation();
         Javalin app = Javalin.create(config -> config.enableCorsForAllOrigins()).
-                start(8000);
+                start(8000);*/
+
+        BankSystemController bankSystemController = new BankSystemController();
+        bankSystemController.bankSystemController();
 
 
-        /**
-         * ====================================Customer===View==========================================================
-         */
 
-        //apply for a new customer account
+
+     /*   //apply for a new customer account
         app.post("/customer", ctx -> {
             try {
                 Customer customer = ctx.bodyAsClass(Customer.class);
@@ -174,9 +175,9 @@ public class BankMain {
         });
 
 
-        /**
+        *//**
          * ====================================Employee===View==========================================================
-         */
+         *//*
 
         //apply for a new customer account
         app.post("/employee", ctx -> {
@@ -297,7 +298,7 @@ public class BankMain {
             } catch (BankException e) {
                 ctx.json(e);
             }
-        });
+        });*/
 
 
 /**
