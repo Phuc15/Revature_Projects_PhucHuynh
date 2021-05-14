@@ -33,7 +33,7 @@ public interface EmployeeFunction {
     public  List<Transaction> displayPreviousTransactionByDate(String date) throws  BankException;
     public void registerForEmployeeAccount(Employee employee) throws BankException;
     public boolean validateEmployeeAccount(String username, String password) throws BankException;
-    public Customer getCustomerApprover(int id);
+    public Customer getCustomerApprover(int id) throws BankException;
 
 
 }

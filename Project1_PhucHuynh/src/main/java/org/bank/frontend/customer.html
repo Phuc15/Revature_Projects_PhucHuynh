@@ -1,24 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <title>billybankingapp</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <!-- Jumbotron -->
-        <div class="p-5 text-center bg-light">
-          <h1 class="mb-3">Billy's Banking App</h1>
+      <!-- Jumbotron -->
+      <div class="p-5 text-center bg-light">
+        <h1 class="mb-3">Billy's Banking App</h1>
+        <h3 class="mb3">Customer UI</h3>
+      </div>
+      <!-- Jumbotron -->
+    </header>
+
+    <ul
+      class="nav nav-tabs nav-justified md-tabs indigo"
+      id="myTabJust"
+      role="tablist"
+      style="background-color: dimgrey"
+    >
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          id="bank-tab-just"
+          data-toggle="tab"
+          href="#bank-just"
+          role="tab"
+          aria-controls="home-just"
+          aria-selected="true"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="functions-tab-just"
+          data-toggle="tab"
+          href="#functions-just"
+          role="tab"
+          aria-controls="profile-just"
+          aria-selected="false"
+          >Functions</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="apply-tab-just"
+          data-toggle="tab"
+          href="#apply-just"
+          role="tab"
+          aria-controls="contact-just"
+          aria-selected="false"
+          >Apply</a
+        >
+      </li>
+    </ul>
+    <div class="tab-content card pt-5" id="myTabContentJust">
+      <!--Bank tab-->
+
+      <div
+        class="tab-pane fade show active"
+        id="bank-just"
+        role="tabpanel"
+        aria-labelledby="bank-tab-just"
+      >
+        <div id="banktable">
+          <span style="color: red" id="err"></span><br>
+          <button id="btn" class="btn btn-success" type="button">Display</button
+          ><br />
         </div>
-        <!-- Jumbotron -->
-      </header>  
-    
-<!-- JavaScript Bundle with Popper -->
-<script src="customer.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>   
-</body>
+      </div>
+
+      <!--Functions tab-->
+      <div
+        class="tab-pane fade"
+        id="functions-just"
+        role="tabpanel"
+        aria-labelledby="functions-tab-just"
+      >
+        <!--Deposit-->
+        <form class="container" class = "mask">
+          <h4 class="font-weight-normal">--Deposit--</h4>
+          <div class="form-group">
+            <label for="inputsm">Amount</label>
+            <input class="form-control input-sm" id="balance" type="text" />
+            <label for="inputsm">Account Type</label>
+            <select id="banktype-d">
+              <option value="Saving">Saving</option>
+              <option value="Checking">Checking</option></select
+            ><br />
+            <span style="color: red" id="err3"></span><br />
+            <button id="btn3" class="btn btn-success" type="button">
+              Deposit</button
+            ><br />
+          </div>
+        </form>
+        <!--Deposit-->
+        <br />
+        <br />
+        <br />
+        <!--Withraw-->
+        <form class="container">
+          <h4 class="font-weight-normal">--Withdraw--</h4>
+          <div class="form-group">
+            <label for="inputsm">Amount</label>
+            <input class="form-control input-sm" id="balance-w" type="text" />
+            <label for="inputsm">Account Type</label>
+            <select id="banktype-w">
+              <option value="Saving">Saving</option>
+              <option value="Checking">Checking</option></select
+            ><br />
+            <span style="color: red" id="err4"></span><br />
+            <button id="btn4" class="btn btn-success" type="button">
+              widthdraw</button
+            ><br />
+          </div>
+        </form>
+        <!--Withdraw-->
+        <br />
+        <br />
+        <br />
+        <!--Tranfer-->
+        <form class="container">
+          <h4 class="font-weight-normal">--Tranfer--</h4>
+          <div class="form-group">
+            <label for="inputsm">Amount</label>
+            <input class="form-control input-sm" id="balance-t" type="text" />
+            <label for="inputsm">To</label>
+            <input
+              class="form-control input-sm"
+              id="to-account-t"
+              type="text"
+            />
+            <label for="inputsm">Account Type</label>
+            <select id="banktype-t">
+              <option value="Saving">Saving</option>
+              <option value="Checking">Checking</option></select
+            ><br />
+            <span style="color: red" id="err5"></span><br />
+            <button id="btn5" class="btn btn-success" type="button">Send</button
+            ><br />
+          </div>
+        </form>
+        <!--Tranfer-->
+        <br />
+        <br />
+        <br />
+        <!--Display Pending Transactions-->
+        <form class="container">
+          <h4 class="font-weight-normal">--Display Pending Transactions--</h4>
+          <div class="form-group">
+            <div id="pending-transaction">
+              <span style="color: red" id="err6"></span><br />
+              <button id="btn6" class="btn btn-success" type="button">
+                Display</button
+              ><br />
+            </div>
+          </div>
+        </form>
+        <!--Display Pending Transactions-->
+        <br />
+        <br />
+        <br />
+        <!--Accept Transfer-->
+        <form class="container">
+          <h4 class="font-weight-normal">
+            --Accept Pending Transaction By ID--
+          </h4>
+          <div class="form-group">
+            <label for="inputsm">Transaction ID</label>
+            <input class="form-control input-sm" id="customer-id" type="text" />
+            <span style="color: red" id="err7"></span><br />
+            <button id="btn7" class="btn btn-success" type="button">
+              Accept</button
+            ><br />
+          </div>
+        </form>
+        <!--Accept Transfer-->
+         <br>
+         <br>
+         <br>
+        <!--Display all of your previous transaction-->
+        <form class="container">
+          <h4 class="font-weight-normal">
+            --Display Previous Transactions--
+          </h4>
+          <div id="transaction-p">
+            <span style="color: red" id="err8"></span>
+            <button id="btn8" class="btn btn-success" type="button">
+              Display</button
+            ><br />
+          </div>
+        </form>
+        <!--Display all of your transaction-->
+        <br>
+        <br>
+        <br>
+      
+      </div>
+      <!--Apply tab-->
+      <div
+        class="tab-pane fade"
+        id="apply-just"
+        role="tabpanel"
+        aria-labelledby="apply-tab-just"
+      >
+        <form class="container">
+          <h4 class="font-weight-normal">Apply For a New Bank Account</h4>
+          <div class="form-group">
+            <label for="inputsm">Amount</label>
+            <input class="form-control input-sm" id="amount" type="text" />
+            <label for="inputsm">Account Type</label>
+            <select id="banktype">
+              <option value="Saving">Saving</option>
+              <option value="Checking">Checking</option></select
+            ><br />
+            <span style="color: red" id="err1"></span><br />
+            <button id="btn2" class="btn btn-success" type="button">
+              Submit</button
+            ><br />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="text-center">
+      <button id = "btn9"type="button" class="btn btn-info">Logout</button>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="customer.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

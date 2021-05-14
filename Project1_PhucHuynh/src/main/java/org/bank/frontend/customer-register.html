@@ -15,16 +15,16 @@
         <!-- Jumbotron -->
       </header> 
       <form class="container">
-        <h4 class="font-weight-normal">Customer Login</h4>
+        <h4 class="font-weight-normal">Regsister</h4>
         <div class="form-group">
           <label for="inputsm">Username</label>
           <input class="form-control input-sm" id="username" type="text">
           <label for="inputsm">Password</label>
           <input class="form-control input-sm" id="password" type="text">
           <label for="inputsm">Name</label>
-          <input class="form-control input-sm" id="customerName" type="text">
+          <input class="form-control input-sm" id="customername" type="text">
           <label for="inputsm">Contact Number (###-###-####)</label>
-          <input class="form-control input-sm" id="contact" type="text">
+          <input class="form-control input-sm" id="contact" type="text"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="ex: 206-200-9148" >
           <span style="color: red;" id="err"></span>
           <br>
           <button id = "btn1" class="btn btn-success" type="button">Submit</button><br>

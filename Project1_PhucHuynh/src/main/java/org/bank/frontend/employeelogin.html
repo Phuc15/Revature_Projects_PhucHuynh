@@ -2,11 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>billybankingapp</title>
 </head>
 <body>
+    <div class="bg-image" 
+     style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+            height: 100vh">
+            <br>
+            <br>
+            <br>
+            <br>
+            <header>
+                <!-- Jumbotron -->
+                <div>
+                  <h1 class="mb-4" class ="font-weight-normal"style="text-align: center;">Billy's Banking App</h1>
+                </div>
+                <!-- Jumbotron -->
+              </header> 
     
+        
+          <div class="container"class="mask">
+            <form action="">
+                <h4 class="font-weight-normal">Employee Login</h4>
+                <input class="form-control" type="text" id ="username" placeholder="username">
+                <br>
+                <input class ="form-control" type="text" id ="password" placeholder="password">
+                <span style="color: red;" id="err"></span><br/>
+                <button id = "btn10" class="btn btn-success" type="button">Login</button><br>
+                <span><a href ="javascript:void (location.replace('http://127.0.0.1:5500/customerlogin.html','_blank'))">Login as a employee</a></span>
+
+            </form>    
+            </div>
+</div>
+        
+<!-- JavaScript Bundle with Popper -->
+<script src="employee-login.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>   
 </body>
 </html>

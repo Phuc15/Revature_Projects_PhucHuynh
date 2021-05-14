@@ -33,7 +33,7 @@ public class CustomerDAOImpl implements CustomerDAO {
                 if (customer.getUsername().equals(username)) {
                     throw new BankException("Username already exist. Please try again");
                 } else {
-                    System.out.println("Your information looks good!!!!");
+                    logger.info("Your information looks good!!!!");
                 }
             }
             String sql1 = "INSERT INTO mybank_schema.customer\n" +
@@ -127,9 +127,21 @@ public class CustomerDAOImpl implements CustomerDAO {
      *  this method takes the customer id and approve the status on the database so they can open the bank accounts with
      */
     @Override
-    public boolean approveCustomerAccountById(int id, String username) {
+    public boolean approveCustomerAccountById(int id, String username) throws BankException {
+        boolean status = true;
         try (Connection connection = ConnectionManager.getConnection()) {
             if(id <0) return false;
+            Customer customer = new Customer();
+            String sql1 = "SELECT username, password, customer_name, contact, customer_id, status\n" +
+                    "FROM mybank_schema.customer where customer_id = ? and status = ?;";
+            PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
+            preparedStatement1.setInt(1, id);
+            preparedStatement1.setString(2, "Pending");
+            ResultSet resultSet1 = preparedStatement1.executeQuery();
+            if (resultSet1.next()){
+                customer.setCustomerId(resultSet1.getInt("customer_id"));
+            }
+            if(customer.getCustomerId() != id) status = false;
             String sql = "UPDATE mybank_schema.customer\n" +
                     "SET status= ? \n" +
                     "WHERE customer_id= ?\n";
@@ -142,7 +154,7 @@ public class CustomerDAOImpl implements CustomerDAO {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return true;
+        return status;
     }
     /*
      * This method takes customerId and reject the account  by delete it off the database
@@ -151,6 +163,18 @@ public class CustomerDAOImpl implements CustomerDAO {
     public boolean rejectCustomerAccountById(int id) {
         try (Connection connection = ConnectionManager.getConnection()) {
             if(id < 0)  return false;
+            Customer customer = new Customer();
+            String sql1 = "SELECT username, password, customer_name, contact, customer_id, status\n" +
+                    "FROM mybank_schema.customer where customer_id = ? and status = ?;";
+            PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
+            preparedStatement1.setInt(1, id);
+            preparedStatement1.setString(2, "Pending");
+            ResultSet resultSet1 = preparedStatement1.executeQuery();
+            if (resultSet1.next()){
+                customer.setCustomerId(resultSet1.getInt("customer_id"));
+            }
+            if(customer.getCustomerId() != id) return false;
+
             String sql = "DELETE FROM mybank_schema.customer\n" +
                     "WHERE customer_id = ?;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -167,9 +191,19 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public Customer getCustomerApprover(int id) {
+    public Customer getCustomerApprover(int id) throws BankException {
         Customer customer = new Customer();
         try (Connection connection = ConnectionManager.getConnection()) {
+
+            String sql1 = "SELECT username, password, customer_name, contact, customer_id, status\n" +
+                    "FROM mybank_schema.customer where customer_id = ?;";
+            PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
+            preparedStatement1.setInt(1, id);
+            ResultSet resultSet1 = preparedStatement1.executeQuery();
+            if (resultSet1.next()){
+                customer.setCustomerId(resultSet1.getInt("customer_id"));
+            }
+            if(customer.getCustomerId() != id) throw new BankException("Id is not found");
             String sql = "SELECT status\n" +
                     "FROM mybank_schema.customer where customer_id = ?;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -180,13 +214,13 @@ public class CustomerDAOImpl implements CustomerDAO {
 
                 customer.setStatus(resultSet.getString("status"));
             }
+            if(customer.getStatus().equals("Pending")) throw new BankException("Account is still pending to be approved");
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
         return customer;
     }
 }

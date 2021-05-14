@@ -110,7 +110,7 @@ public class EmployeeFunctionImplementation implements EmployeeFunction {
     }
 
     @Override
-    public Customer getCustomerApprover(int id) {
+    public Customer getCustomerApprover(int id) throws BankException {
         return customerDAO.getCustomerApprover(id);
     }
 

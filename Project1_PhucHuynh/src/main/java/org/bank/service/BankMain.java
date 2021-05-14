@@ -37,7 +37,7 @@ public class BankMain {
             try {
                 Customer customer = ctx.bodyAsClass(Customer.class);
                 employeeFunction.registerForNewAccount(customer);
-                ctx.result("Thank you for choosing Billy Banking. Your account is now pending to be approved");
+                ctx.json("Thank you for choosing Billy Banking. Your account is now pending to be approved");
             }catch (BankException e) {
                 ctx.json(e.getMessage());
             }
@@ -66,9 +66,12 @@ public class BankMain {
                 ctx.body();
                 JSONObject jsonObject = new JSONObject(ctx.body());
                 String username = jsonObject.getString("username");
+
                 String accountType = jsonObject.getString("accountType");
-                double amount = jsonObject.getDouble("amount");
+                double amount = Double.parseDouble(jsonObject.getString("balance"));
+
                 customerService.applyForBankAccount(username, accountType, amount);
+                ctx.json("successful");
 
             }catch (BankException e){
                 ctx.json(e.getMessage());
@@ -78,12 +81,13 @@ public class BankMain {
         //view banking info
         app.get("/customer/:username", ctx -> {
             try {
+                String username = ctx.pathParam("username");
 
-                Customer customer = ctx.bodyAsClass(Customer.class);
-                List<BankAccount> list = customerService.viewBankAccount(customer.getUsername());
+                List<BankAccount> list = customerService.viewBankAccount(username);
                 ctx.json(list);
             }catch (BankException e){
                 ctx.json(e.getMessage());
+                logger.error(e.getMessage());
             }
         });
 
@@ -96,8 +100,10 @@ public class BankMain {
                 JSONObject jsonObject = new JSONObject(ctx.body());
                 String username = jsonObject.getString("username");
                 String accountType = jsonObject.getString("accountType");
-                double amount = jsonObject.getDouble("amount");
+                double amount = Double.parseDouble(jsonObject.getString("balance"));
+
                 customerService.deposit(username, accountType, amount);
+                ctx.json("successful");
             }catch (BankException e) {
                 ctx.json(e.getMessage());
             }
@@ -111,8 +117,9 @@ public class BankMain {
                 JSONObject jsonObject = new JSONObject(ctx.body());
                 String username = jsonObject.getString("username");
                 String accountType = jsonObject.getString("accountType");
-                double amount = jsonObject.getDouble("amount");
-                customerService.deposit(username, accountType, amount);
+                double amount = Double.parseDouble(jsonObject.getString("balance"));
+                customerService.withdraw(username, accountType, amount);
+                ctx.json("successful");
             }catch (BankException e){
                 ctx.json(e.getMessage());
             }
@@ -124,21 +131,21 @@ public class BankMain {
                 ctx.body();
                 JSONObject jsonObject = new JSONObject(ctx.body());
                 String fromUsername = jsonObject.getString("username");
-                String toUsername = jsonObject.getString("toUsername");
+                String toUsername = jsonObject.getString("toUser");
                 String accountType = jsonObject.getString("accountType");
-                double amount = jsonObject.getDouble("amount");
+                double amount = Double.parseDouble(jsonObject.getString("balance"));
                 customerService.makeTransfer(fromUsername, toUsername, accountType, amount);
+                ctx.json("successful");
             }catch (BankException e){
                 ctx.json(e.getMessage());
             }
         });
 
         //Retrieve all of pending transaction
-        app.get("/customer/bankaccount/get-pending-transaction", ctx -> {
+        app.get("/customer/bankaccount/get-pending-transaction/:username", ctx -> {
             try {
-                ctx.body();
-                JSONObject jsonObject = new JSONObject(ctx.body());
-                String username = jsonObject.getString("username");
+                String username = ctx.pathParam("username");
+
                 List<Transaction> list = customerService.displayPendingTransaction(username);
                 ctx.json(list);
             }catch (BankException e){
@@ -148,24 +155,19 @@ public class BankMain {
 
 
         // Accept the pending transactions by the id
-        app.post("/customer/bankaccount/accept-pending-transaction", ctx -> {
+        app.get("/customer/bankaccount/accept-pending-transaction/:id", ctx -> {
             try {
-                ctx.body();
-                JSONObject jsonObject = new JSONObject(ctx.body());
-                int id  = jsonObject.getInt("pendingTransactionId");
-                customerService.acceptPendingTransfer(id);
+                int id  = Integer.parseInt(ctx.pathParam("id"));
+                boolean status = customerService.acceptPendingTransfer(id);
+                ctx.json(status);
             }catch (BankException e){
                 ctx.json(e.getMessage());
             }
         });
-
-
         //Display all of previous transaction
-        app.get("/customer/bankaccount/display/previous-transaction", ctx -> {
+        app.get("/customer/bankaccount/display/previous-transaction/:username", ctx -> {
             try {
-                ctx.body();
-                JSONObject jsonObject = new JSONObject(ctx.body());
-                String username = jsonObject.getString("username");
+               String username = ctx.pathParam("username");
                 List<Transaction> list = customerService.displayPreviousTransactionByUsername(username);
                 ctx.json(list);
             }catch (BankException e){
@@ -182,15 +184,13 @@ public class BankMain {
         app.post("/employee", ctx -> {
             Employee employee = ctx.bodyAsClass(Employee.class);
             employeeFunction.registerForEmployeeAccount(employee);
-            ctx.result("Congrats! You have successfully registered YAY!!!!");
+            ctx.json("Congrats! You have successfully registered YAY!!!!");
         });
 
         //display bankinfo by the customer id
-        app.get("/employee/customer/bankaccount", ctx -> {
+        app.get("/employee/customer/:id", ctx -> {
             try {
-                ctx.body();
-                JSONObject jsonObject = new JSONObject(ctx.body());
-                int id  = jsonObject.getInt("id");
+                int id  = Integer.parseInt(ctx.pathParam("id"));
                List<BankAccount> list = employeeFunction.displayCustomerBankAccountById(id);
                ctx.json(list);
             }catch (BankException e){
@@ -209,12 +209,10 @@ public class BankMain {
         });
 
         //approve the customer by id
-        app.get("/employee/approve-customer-pending", ctx -> {
+        app.get("/employee/approve-customer-pending/:id/:employeeUsername", ctx -> {
             try {
-                ctx.body();
-                JSONObject jsonObject = new JSONObject(ctx.body());
-                int id  = jsonObject.getInt("id");
-                String employeeUsername = jsonObject.getString("employeeUsername");
+                int id = Integer.parseInt(ctx.pathParam("id"));
+                String employeeUsername = ctx.pathParam("employeeUsername");
                 boolean status = employeeFunction.approveCustomerAccountById(id, employeeUsername);
                 ctx.json(status);
             }catch (BankException e){
@@ -224,11 +222,9 @@ public class BankMain {
 
         //reject the customer by id
 
-        app.get("/employee/reject-customer-pending", ctx -> {
+        app.get("/employee/reject-customer-pending/:id", ctx -> {
             try {
-                ctx.body();
-                JSONObject jsonObject = new JSONObject(ctx.body());
-                int id  = jsonObject.getInt("id");
+                int id  =  Integer.parseInt(ctx.pathParam("id"));
                 boolean status = employeeFunction.rejectCustomerAccountById(id);
                 ctx.json(status);
             }catch (BankException e){
@@ -238,9 +234,7 @@ public class BankMain {
         //display all transaction by customer id
         app.get("/employee/bankaccount/transaction/:id", ctx -> {
             try {
-                ctx.body();
-                JSONObject jsonObject = new JSONObject(ctx.body());
-                int id  = jsonObject.getInt("customerId");
+                int id = Integer.parseInt(ctx.pathParam("id"));
                List<Transaction>  list = employeeFunction.displayPreviousTransactionById(id);
                 ctx.json(list);
             }catch (BankException e){
@@ -249,38 +243,49 @@ public class BankMain {
         });
 
         //display all the transaction by account id
-        app.get("/employee/bankaccount/transaction-by-accountid", ctx -> {
+        app.get("/employee/bankaccount/transaction-by-accountid/:id", ctx -> {
             try {
-                ctx.body();
-                JSONObject jsonObject = new JSONObject(ctx.body());
-                int accountId  = jsonObject.getInt("accountId");
-                List<Transaction> list = employeeFunction.displayPreviousTransactionByAccountId(accountId);
+                int id = Integer.parseInt(ctx.pathParam("id"));
+                List<Transaction> list = employeeFunction.displayPreviousTransactionByAccountId(id);
                 ctx.json(list);
             }catch (BankException e){
                 ctx.json(e.getMessage());
             }
         });
 
-        // display all the transaction by date
-        app.get("/employee/bankaccount/transaction-by-transactionid", ctx -> {
+        // display all the transaction by transaction id
+        app.get("/employee/bankaccount/transaction-by-transactionid/:id", ctx -> {
             try {
-                ctx.body();
-                JSONObject jsonObject = new JSONObject(ctx.body());
-                int transactionId  = jsonObject.getInt("transactionId");
-                List<Transaction> list = employeeFunction.displayPreviousTransactionByTransactionId(transactionId);
+                int id = Integer.parseInt(ctx.pathParam("id"));
+                List<Transaction> list = employeeFunction.displayPreviousTransactionByTransactionId(id);
                 ctx.json(list);
             }catch (BankException e){
                 ctx.json(e.getMessage());
             }
         });
+        // display all the transaction by date
+        app.get("/employee/bankaccount/transaction-by-date/:date", ctx -> {
+            try {
+                String tempDate = ctx.pathParam("date");
+                String date = tempDate+"%";
+                System.out.println(date);
+                List<Transaction> list = employeeFunction.displayPreviousTransactionByDate(date);
+                System.out.println(list);
+                ctx.json(list);
+            }catch (BankException e){
+                ctx.json(e.getMessage());
+            }
+        });
+
 
         //validate employee account
 
-        app.get("/employee", ctx -> {
+        app.get("/employee/:username/:password", ctx -> {
             try {
-                boolean validation = false;
-                Employee employee = ctx.bodyAsClass(Employee.class);
-                validation = employeeFunction.validateEmployeeAccount(employee.getEmployeeUsername(), employee.getEmployeePassword());
+                boolean validation;
+                String username = ctx.pathParam("username");
+                String password = ctx.pathParam("password");
+                validation = employeeFunction.validateEmployeeAccount(username, password);
                 ctx.json(validation);
             }catch (BankException e){
                 ctx.json(e.getMessage());
@@ -288,14 +293,17 @@ public class BankMain {
         });
 
         //Get the Approver that approve specific customer
-        app.get("/employee/approver", ctx -> {
-            ctx.body();
-            JSONObject jsonObject = new JSONObject(ctx.body());
-
-            int customerId  = jsonObject.getInt("customerId");
-           Customer customer = employeeFunction.getCustomerApprover(customerId);
-            ctx.json(customer);
+        app.get("/employee/display/approver/:id", ctx -> {
+            try {
+                int id = Integer.parseInt(ctx.pathParam("id"));
+                Customer customer = employeeFunction.getCustomerApprover(id);
+                ctx.json(customer);
+            }catch (BankException e){
+                ctx.json(e);
+            }
         });
+
+
 
 
 
