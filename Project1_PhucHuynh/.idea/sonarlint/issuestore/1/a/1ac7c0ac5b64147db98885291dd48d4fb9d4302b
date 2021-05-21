@@ -1,0 +1,10 @@
+
+j
+java:S2095""OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÌÖ¢žøÿÿÿÿ
+j
+java:S20956"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½¨“Ðúÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(È®¥þúÿÿÿÿ
+<
+java:S1481("&Remove this unused "c" local variable.(ñ¿£ó

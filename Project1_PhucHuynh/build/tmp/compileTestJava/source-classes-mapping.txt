@@ -1,10 +1,10 @@
+BankAccountTesting.java
+ BankAccountTesting
 BankAccountDAOTesting.java
  BankAccountDAOTesting
 CustomerTesting.java
  CustomerTesting
-BankAccountTesting.java
- BankAccountTesting
-CustomerDAOTesting.java
- CustomerDAOTesting
 ServicesTesting.java
  ServicesTesting
+CustomerDAOTesting.java
+ CustomerDAOTesting

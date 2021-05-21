@@ -1,5 +1,5 @@
 
-{
-java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(’çù†ûÿÿÿÿ8¦Îû€/
-W
-java:S1118	":Add a private constructor to hide the implicit public one.(ˆƒ™Ø8ª¢ş€/
+r
+java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(’çù†ûÿÿÿÿ
+N
+java:S1118":Add a private constructor to hide the implicit public one.(ˆƒ™Ø

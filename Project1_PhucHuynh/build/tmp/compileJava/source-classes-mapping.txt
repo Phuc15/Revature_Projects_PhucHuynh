@@ -26,11 +26,11 @@ org/bank/daos/implementation/CustomerDAOImpl.java
  org.bank.daos.implementation.CustomerDAOImpl
 org/bank/daos/implementation/EmployeeDAOImpl.java
  org.bank.daos.implementation.EmployeeDAOImpl
-org/bank/service/BankMain.java
- org.bank.service.BankMain
+org/bank/daos/implementation/BankAccountDAOImpl.java
+ org.bank.daos.implementation.BankAccountDAOImpl
 org/bank/service/implementation/CustomerServiceImplementation.java
  org.bank.service.implementation.CustomerServiceImplementation
 org/bank/service/implementation/EmployeeFunctionImplementation.java
  org.bank.service.implementation.EmployeeFunctionImplementation
-org/bank/daos/implementation/BankAccountDAOImpl.java
- org.bank.daos.implementation.BankAccountDAOImpl
+org/bank/service/BankMain.java
+ org.bank.service.BankMain
