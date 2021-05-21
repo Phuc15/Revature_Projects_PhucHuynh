@@ -46,9 +46,16 @@ To-do list:
 * Customer Register
 ![Register](screenshots/Customer_register.PNG)
 
-*Customer UI
+* Customer UI
 ![CustomerUI](screenshots/CustomerUI_Functions.PNG)
 
+* Employee Login
+> username: phuch
+> password: phucsonmy
+![Login](screenshots/employeelogin.PNG)
+
+* Employee UI
+![CustomerUI](screenshots/employeeUI.PNG)
 
 
 
