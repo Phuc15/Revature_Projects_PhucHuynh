@@ -1,23 +1,46 @@
-1)Project1 -> improvistaion of Project0
-2)You will converting Project0 console based to Web based Application.
-3)Additionally now in the system there can be multiple employees(i.e) you can register the employee in to the system.
-4)We should now be able to see who was th employee who approved a particular customer.
-5)Customer should be able to view his previous transactions made.
-6)Employees will have multpile filters to search the transaction(by transaction id, type,customerid,accountno,date)
-7)Customer should be able to open any number of accounts.
+# Banking App
 
+## Project Description
+The Bank app is a console-based application that simulates banking operations. A customer can apply for an account, view their balance, and make withdrawals and deposits. An employee can approve or deny accounts and view account balances for their customers.
+Here goes your awesome project description!
 
-Tech Stack
-------------------
-1)JavaLIN(backend) with 3 kayers in backend controller->service->dao
-2)DB will be still PostgresSQL
-3)Interaction with DB you can go with JDBC itself or you will be learning Hibernate next week you can apply that as well.
-4)You should have UI(html,css/bootstrap, javascript validations on frontend and use javacript either fetch or AJAX to make RESTful calls to backend Javalin)
-5)Maintain seperate Login Screens for Employee and Customer.
-6)Communicate exceptions from server to client.
-7)Logging using log4j
-8)Minimum 10 Junit Test cases and 10 Mock cases.....
+## Technologies Used
 
+* Languages - JS, Java, HTML, PostgreSQL
+* Frameworks - Javalin, Restful, Bootstrap
+* Testing - Junit, Mockito
+* Others - JDBC, AWS, IntelliJ,Visual studio Code, Log4j
 
-Project 1 Presentations on 14th May. :)
-HTML(CSSorBS) ->validation JS->fetch JS (http call)->JAvalin server->service->DAO->DB
+## Features
+
+List of features ready and TODOs for future development
+* Login for both customer and employee
+* Register for new user accounts 
+* Customers can apply for new bank accounts
+* Customers can view their own account information including past transactions and  make transactions by deposit, withdraw, tranfer, accept transfers from different users
+* Employee can perform search for customers or transactions using filters (customer id, bankaccount id, username, date, transaction id)
+* Employee can accept and reject customer accounts
+
+To-do list:
+* Improvise UI to be more friendly 
+* Add a uploading feature that contain images of the employe or list of customer accounts to get approved
+* Only certain employees like supervisors or admins have access to employee registration  
+
+## Getting Started
+>git clone https://github.com/Phuc15/Revature_Projects_PhucHuynh.git
+>javac BankMain.java
+>java BankMain
+>google-chrome customerlogin.html
+
+- IDEs: Visual studio Code, Intellij
+> run the BankMain.java 
+> run the customerlogin.html
+
+## Usage
+
+> Customer Login
+(/screenshots/Login.png)
+
+## License
+
+This project uses the following license: [<license_name>](<link>).
