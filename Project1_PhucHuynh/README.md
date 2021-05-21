@@ -46,6 +46,10 @@ To-do list:
 * Customer Register
 ![Register](screenshots/Customer_register.PNG)
 
+*Customer UI
+![CustomerUI](screenshots/CustomerUI_Functions.PNG)
+
+
 
 
 
