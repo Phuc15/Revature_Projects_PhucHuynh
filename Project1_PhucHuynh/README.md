@@ -27,19 +27,19 @@ To-do list:
 * Only certain employees like supervisors or admins have access to employee registration  
 
 ## Getting Started
-*git clone https://github.com/Phuc15/Revature_Projects_PhucHuynh.git
-*javac BankMain.java
-*java BankMain
-*google-chrome customerlogin.html
+* git clone https://github.com/Phuc15/Revature_Projects_PhucHuynh.git
+* javac BankMain.java
+* java BankMain
+* google-chrome customerlogin.html
 
-- IDEs: Visual studio Code, Intellij
+> IDEs: Visual studio Code, Intellij
 * run the BankMain.java 
 *  run the customerlogin.html
 
 ## Usage
 
 > Customer Login
-![Login]screenshots/Login.png)
+![Login](screenshots/Login.png)
 
 ## License
 
