@@ -38,8 +38,8 @@ To-do list:
 
 ## Usage
 
-> Customer Login
-![Login](screenshots/Login.png)
+* Customer Login
+![Login](screenshots/Login.PNG)
 
 ## License
 
