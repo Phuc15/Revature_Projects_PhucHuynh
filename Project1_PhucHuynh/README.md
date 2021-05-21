@@ -39,7 +39,15 @@ To-do list:
 ## Usage
 
 * Customer Login
+> username: phuch
+> password: phucsonmy
 ![Login](screenshots/Login.PNG)
+
+* Customer Register
+![Register](screenshots/Customer_register.PNG)
+
+
+
 
 ## License
 
