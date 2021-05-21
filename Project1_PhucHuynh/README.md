@@ -39,7 +39,7 @@ To-do list:
 ## Usage
 
 > Customer Login
-(/screenshots/Login.png)
+![Login]screenshots/Login.png)
 
 ## License
 
